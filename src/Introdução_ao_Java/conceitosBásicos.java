@@ -15,7 +15,8 @@ public class conceitosBásicos {
     public static void main (String[] args){
     /*
      * Váriavel é basicamente um lugar da memória na qual vai ser utilizada para armazenar algum tipo de dado. 
-     * As variáveis se dividem em primitivas e não primitivas. Integer, ou inteiro em português
+     * As variáveis se dividem em primitivas e não primitivas. Primitivos: integer(4 bytes), char, Byte(1 byte), Short(2 bytes), Long(8 bytes)
+     * Float, Double.
      */
     Integer Minha_idade = 17;
     String Meu_Nome = "Erick";
