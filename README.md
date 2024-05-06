@@ -26,3 +26,5 @@
 
   **.vscode:** *A pasta .vscode é uma pasta personalizada criada pela própria IDE da Microsoft. Nessa pasta se encontra o arquivo settings.json, nele você pode aplicar algumas
   personalizações ao seu código e funções especifícas. Pessoalmente nunca tive necessidade de mexer nesta pasta, então ignore neste repositório também*
+
+  # Não esqueça de ver as páginas da wiki! Lá você encontrará em detalhes mais informações deste repositório.
