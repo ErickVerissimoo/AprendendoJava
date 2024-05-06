@@ -17,3 +17,12 @@
 - https://www.oracle.com/br/java/
 
 - [*Playlist de java em espanhol (aproveito para aperfeiçoar meu espanhol e aprender java ao mesmo tempo)*](https://www.youtube.com/playlist?list=PLyvsggKtwbLX9LrDnl1-K6QtYo7m0yXWB)
+
+  ##### Funcionamento do repositório
+
+  **Src**: *É onde se encontra o conteúdo principal. É nele que se encontra as classes java e demais conteúdos.*
+
+  **Bin**: *É nele que se encontra as classes java compiladas, ou seja, convertidas numa linguagem na qual o computador consegue compreender. No geral, apenas se concentre na pasta src.*
+
+  **.vscode:** *A pasta .vscode é uma pasta personalizada criada pela própria IDE da Microsoft. Nessa pasta se encontra o arquivo settings.json, nele você pode aplicar algumas
+  personalizações ao seu código e funções especifícas. Pessoalmente nunca tive necessidade de mexer nesta pasta, então ignore neste repositório também*
