@@ -10,7 +10,7 @@
 
 *Particularmente, meu intuito é mostrar minha jornada no aprendizado de Java, desde o básico até aonde eu conseguir chegar. **Cabe ressaltar que não faço questão de que tudo neste repositório esteja 100% correto e perfeito**, pois acredito que errar faz parte do processo de aprendizagem. Fiquem a vontade para clonar o repositório e testar na máquina de vocês cada código que verem aqui.*
 
-### Materiais utilizados e fontes
+## Materiais utilizados e fontes
 
 - [*Livro básico de java dentro do próprio Github*](https://github.com/free-educa/books/blob/main/books/Java%20e%20Orienta%C3%A7%C3%B5es%20a%20Objetos.pdf)
 
@@ -18,7 +18,7 @@
 
 - [*Playlist de java em espanhol (aproveito para aperfeiçoar meu espanhol e aprender java ao mesmo tempo)*](https://www.youtube.com/playlist?list=PLyvsggKtwbLX9LrDnl1-K6QtYo7m0yXWB)
 
-  ##### Funcionamento do repositório
+  #### Funcionamento do repositório
 
   **Src**: *É onde se encontra o conteúdo principal. É nele que se encontra as classes java e demais conteúdos.*
 
