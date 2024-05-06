@@ -18,7 +18,7 @@
 
 - [*Playlist de java em espanhol (aproveito para aperfeiçoar meu espanhol e aprender java ao mesmo tempo)*](https://www.youtube.com/playlist?list=PLyvsggKtwbLX9LrDnl1-K6QtYo7m0yXWB)
 
-  #### Funcionamento do repositório
+  #### Funcionamento dos códigos do repositório
 
   **Src**: *É onde se encontra o conteúdo principal. É nele que se encontra as classes java e demais conteúdos.*
 
