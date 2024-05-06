@@ -6,7 +6,7 @@
 
 *Para o Java, estarei usando o Microsoft Visual Studio com extensões Java e o OpenJDK 21 instalado.* 
 
-## Intuito
+## Intuito principal
 
 *Particularmente, meu intuito é mostrar minha jornada no aprendizado de Java, desde o básico até aonde eu conseguir chegar. **Cabe ressaltar que não faço questão de que tudo neste repositório esteja 100% correto e perfeito**, pois acredito que errar faz parte do processo de aprendizagem. Fiquem a vontade para clonar o repositório e testar na máquina de vocês cada código que verem aqui.*
 
