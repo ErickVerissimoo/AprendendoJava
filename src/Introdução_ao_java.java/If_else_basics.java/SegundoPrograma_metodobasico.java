@@ -1,6 +1,6 @@
 package src;
 
-public class SegundoPrograma_if_e_mais {
+public class SegundoPrograma_metodobasico {
     public static void main (String [] args){
         /*
         * o comando abaixo chama o método

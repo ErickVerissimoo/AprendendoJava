@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31d8c610-33fe-49b0-b376-09ea85972bf8" name="Changes" comment="Correção e adição de códigos. Segundo programa criado.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Introdução_ao_java.java/If_else_basics.java/SegundoPrograma_if_e_mais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Introdução_ao_java.java/If_else_basics.java/SegundoPrograma_if_e_mais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Introdução_ao_java.java/If_else_basics.java/SegundoPrograma_if_e_mais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Introdução_ao_java.java/If_else_basics.java/SegundoPrograma_metodobasico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
