@@ -20,6 +20,10 @@ public class PrimeiroPrograma_basico {
      */
         Integer Minha_idade = 18;
         System.out.println(Minha_idade);
-
+/*
+* O programa mostra minha idade, que no caso é 18
+* "System.out.println" mostra informações ao usuário.
+*
+ */
     }
 } 
