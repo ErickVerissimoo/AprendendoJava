@@ -31,3 +31,10 @@ public class SegundoPrograma_if_e_mais {
 
 }
 }
+/*
+* O código acima imprime para o usuário a tabuada do 1 até o 10.
+* O código acima pode ser "chamado" várias vezes, e cada vez que
+* for chamado, repetirá a tabuada. Ou seja, se eu escrever "tabuada();"
+* dentro da classe main dez vezes, o usuário verá uma quantidade exorbitante
+* de números em seu console.
+ */

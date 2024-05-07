@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31d8c610-33fe-49b0-b376-09ea85972bf8" name="Changes" comment="Correção e adição de códigos. Segundo programa criado." />
+    <list default="true" id="31d8c610-33fe-49b0-b376-09ea85972bf8" name="Changes" comment="Correção e adição de códigos. Segundo programa criado.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Introdução_ao_java.java/If_else_basics.java/SegundoPrograma_if_e_mais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Introdução_ao_java.java/If_else_basics.java/SegundoPrograma_if_e_mais.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,21 +28,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ErickVerissimoo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ErickVerissimoo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ErickVerissimoo/AprendendoJava",
-    "accountId": "59404cdb-80e3-4df8-9684-df44b29f1132"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ErickVerissimoo/AprendendoJava&quot;,
+    &quot;accountId&quot;: &quot;59404cdb-80e3-4df8-9684-df44b29f1132&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2g9KxNZOfb9EofzFS182r7cqkmB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,6 +56,7 @@
     "Application.SegundoPrograma_if_e_mais.executor": "Run",
     "Application.conceitosBásicos.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
