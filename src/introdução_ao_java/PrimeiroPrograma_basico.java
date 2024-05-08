@@ -1,7 +1,7 @@
 /*
  * ! Package é o pacote, em outras palavras, o folder principal onde o arquivo java está armazenado. 
  */
-package src;
+package introdução_ao_java;
 /*Aqui é o básico. Programas em java inicia com uma classe pública e sempre com o nome do arquivo, neste caso
  * o nome é "conceitosBásicos". Inclusive, todo o código em Java precisa estar dentro de uma classe. 
  * ? É recomendável que uma classe inicie com letra maiúscula, caso seja uma classe com mais de uma palavra, 

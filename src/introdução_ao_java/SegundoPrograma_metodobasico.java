@@ -1,4 +1,4 @@
-package src;
+package introdução_ao_java;
 
 public class SegundoPrograma_metodobasico {
     public static void main (String [] args){
