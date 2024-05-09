@@ -30,7 +30,6 @@ public class SegundoPrograma_metodobasico {
     }
 
 }
-}
 /*
 * O código acima imprime para o usuário a tabuada do 1 até o 10.
 * O código acima pode ser "chamado" várias vezes, e cada vez que
