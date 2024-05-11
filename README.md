@@ -4,7 +4,7 @@
 
 ## IDE
 
-*Para o Java, estarei usando o IntelliJ e o OpenJDK 21 instalado.* 
+*Para o Java, estarei usando o Visual Studio e o OpenJDK 21 instalado.* 
 
 ## Intuito principal
 
