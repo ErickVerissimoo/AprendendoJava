@@ -6,6 +6,7 @@ public class SegundoPrograma_metodobasico {
         * o comando abaixo chama o método
          */
     tabuada();
+    tabuada();
 }
 /*
 * Colocamos private para indicar que a classe, ou neste caso, o método, tem seu acesso limitado
