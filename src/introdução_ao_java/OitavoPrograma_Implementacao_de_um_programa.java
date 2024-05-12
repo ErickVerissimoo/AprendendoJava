@@ -20,8 +20,7 @@ public class OitavoPrograma_Implementacao_de_um_programa {
 			System.out.print("Nome do aluno: " + Nome + "\nSituação: Reprovado");	
 		} else if (Media>=6) {
 			System.out.print("Nome do aluno: " + Nome + "\nSituação: Aprovado");
-		} 
-		
+		} 	
 		entrada.close();
 
 	}
