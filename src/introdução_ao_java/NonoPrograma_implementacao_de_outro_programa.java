@@ -8,12 +8,12 @@ public class NonoPrograma_implementacao_de_outro_programa {
 	float A;
 	float B;
 	int operacao;
-	float resultado = 0;
+	double resultado = 0;
 	System.out.print("\tBem vindo ao programa calculadora \n\tDigite o primeiro número: ");
 	A= entrada.nextFloat();
 	System.out.print("\tDigite o segundo número");
 	B = entrada.nextFloat();
-	System.out.print("\tSelecione a operacao \n\n\t1 - Adição \n\t2 - Subtração \n\t3 - Multiplicação \n\t4 - Divisão \n\tOperação selecionada: ");
+	System.out.print("\tSelecione a operacao \n\n\t1 - Adição \n\t2 - Subtração \n\t3 - Multiplicação \n\t4 - Divisão \n\tInsira o número: ");
 	operacao = entrada.nextInt();
 	switch (operacao) {
 	case 1:
