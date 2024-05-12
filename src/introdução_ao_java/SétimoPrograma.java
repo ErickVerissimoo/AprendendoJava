@@ -1,5 +1,8 @@
 package introdução_ao_java;
 
+/*
+ * 
+ */
 import java.util.Scanner;
 
 public class SétimoPrograma {
@@ -15,6 +18,7 @@ public class SétimoPrograma {
 		B=entrada.nextInt();
 		resultado=A+B;
 		System.out.println("A soma dos números digitados é:" + resultado);
+		entrada.close();
 	}
 
 }
