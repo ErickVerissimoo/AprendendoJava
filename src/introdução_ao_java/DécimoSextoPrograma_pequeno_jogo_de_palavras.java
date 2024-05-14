@@ -1,7 +1,7 @@
 package introdução_ao_java;
 import java.util.Scanner;
 
-public class DécimoSextoPrograma_implementacao {
+public class DécimoSextoPrograma_pequeno_jogo_de_palavras {
 	public static void main (String[] args) {
 		Scanner entrada = new Scanner (System.in);
 		final String palavra = "palavra";
