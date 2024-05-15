@@ -1,5 +1,8 @@
 package introdução_ao_java;
 import java.util.Scanner;
+/*
+ * comentários em construção
+ */
 import java.lang.Math;
 public class DécimoOitavoPrograma_calculadoracompleta {
 
@@ -11,6 +14,9 @@ public class DécimoOitavoPrograma_calculadoracompleta {
 		float resultado = 0;
 		double B= 0;
 		double A = 0;
+		/*
+		 * comentarios em construção
+		 */
 		double resultado2 = Math.pow(A, B);
 		System.out.print("\n\tBem vindo a calculadora \n\tMenu \n\n\t1: Soma \n\t2: Subtração \n\t3: Multiplicação \n\t4: Divisão \n\t5: Potenciação \n\t6: Sair \n\n\tEntre com o número: ");
 		menu = entrada.nextInt();
@@ -60,7 +66,8 @@ public class DécimoOitavoPrograma_calculadoracompleta {
 				break;
 				default:
 				System.out.print("\n\tEntre com algo válido");
+				entrada.close();
 		}
-	}
+	entrada.close();}
 
-}
+	}
