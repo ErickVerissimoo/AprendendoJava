@@ -1,4 +1,4 @@
-package ProgramaçãoOrientadaAObjetos;
+package introduçãoAProgramaçãoOrientadaObjeta;
 
 public class PrimeiroPrograma_classes_e_objetos {
 
