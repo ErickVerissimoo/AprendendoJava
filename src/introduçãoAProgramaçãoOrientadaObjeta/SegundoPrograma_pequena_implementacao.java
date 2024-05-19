@@ -11,6 +11,12 @@ public class SegundoPrograma_pequena_implementacao {
 		System.out.println("\n\tNome da empresa: " + empresa1.getNome());
 	}
 }
+/*
+ * Essa é uma das formas na qual se cria uma classe. E a partir dessa classe
+ * que é definido os atributos da classe e se origina instanciações derivadas da classe. 
+ * Abaixo definimos a classe empresa e tipificamos seus atributos, isto é, características
+ * intrínsecas a classe empresa.
+ */
 	class Empresa{
 		private String Nome;
 		private String CNPJ;
