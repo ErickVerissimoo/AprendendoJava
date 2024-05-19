@@ -1,5 +1,5 @@
 /*
- * Código com problemas a ser resolvido
+ * Código com problemas lógicos a ser resolvido
  */
 
 package introduçãoAProgramaçãoOrientadaObjeta;
