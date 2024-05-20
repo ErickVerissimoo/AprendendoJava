@@ -1,24 +1,35 @@
 package Ignore;
 
-
 public class Empresa {
-	public String Nome = "";
+	public String Nome;
 	public String CNPJ;
-	public int num_funcionarios;
-	public static void main(String[] args) {
-	        
-	    }
-  
-    public int demitir() {
-        int num_funcionarios = 60;
-        num_funcionarios--;
-        return num_funcionarios; 
-    }
-			public void contratar(){ 
-				int num_funcionarios = 60;
-				num_funcionarios++;
-				System.out.println("O numero de funcionarios aumentou para: " + num_funcionarios);
-				
+	public static int Funcionarios= 60;
 
-			} 
+	public static void main(String[] args) {
+
+	}
+	public void demitir(int Funcionarios) {
+		        if (Empresa.Funcionarios > 0) { // Verifica se há funcionários para demitir
+            Empresa.Funcionarios--; // Decrementa o número de funcionários
+            System.out.println("O número de funcionários agora é: " + Empresa.Funcionarios);
+        } else {
+            System.out.println("Não há funcionários para demitir.");
+        }
+    }
+	public void contratar(int Funcionarios) {
+        if (Empresa.Funcionarios > 0) { // Verifica se há funcionários para demitir
+    Empresa.Funcionarios++; // Decrementa o número de funcionários
+    System.out.println("O número de funcionários agora é: " + Empresa.Funcionarios);
+} else {
+    System.out.println("Não há funcionários para demitir.");
 }
+}
+	public void setNome(String Nome){
+		this.Nome = Nome;
+	}
+	public void setFuncionarios(int Funcionarios){
+		Empresa.Funcionarios = Funcionarios;
+	}
+	public void setCNPJ(String CNPJ){
+		this.CNPJ = CNPJ;
+}}
