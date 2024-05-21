@@ -1,6 +1,6 @@
 package introdução_ao_java;
 import java.util.Scanner;
-public class VigésimoSextoPrograma_return_metodo {
+public class VigésimoQuintoPrograma_return_metodo {
 
 	public static float CalcularArea( float base, float altura ) {
 		float resultado = base * altura;

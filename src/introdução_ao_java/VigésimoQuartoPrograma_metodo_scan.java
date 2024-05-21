@@ -1,7 +1,7 @@
 package introdução_ao_java;
 import java.util.Scanner;
 
-public class VigésimoQuintoPrograma_metodo_scan {
+public class VigésimoQuartoPrograma_metodo_scan {
 	public static void CalculoArea(float base, float altura) {
 		 float resultado = base*altura;
 		System.out.println("O resultado é" + resultado);

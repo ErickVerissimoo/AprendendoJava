@@ -2,7 +2,7 @@ package introdução_ao_java;
 
 import java.util.Scanner;
 
-public class VigesimoQuartoPrograma_AprofundacaoArray {
+public class VigesimoTerceiroPrograma_AprofundacaoArray {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int[] array = new int[5]; 
