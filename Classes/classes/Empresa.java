@@ -1,4 +1,4 @@
-package Ignore;
+package classes;
 
 public class Empresa {
 	public String Nome;

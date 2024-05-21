@@ -1,5 +1,4 @@
-package Testes.Ignore;
-import Testes.Ignore.Teste;
+package Testes;
 
 public class programaTestes {
 	public static void main(String[] args) {

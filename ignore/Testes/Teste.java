@@ -1,4 +1,4 @@
-package Testes.Ignore;
+package Testes;
 import java.util.Scanner;
 public class Teste {
 		Scanner entrada = new Scanner(System.in);
