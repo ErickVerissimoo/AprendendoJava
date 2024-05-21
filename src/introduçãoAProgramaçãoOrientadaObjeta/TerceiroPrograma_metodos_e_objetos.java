@@ -5,6 +5,9 @@ public class TerceiroPrograma_metodos_e_objetos {
 
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner (System.in);
+		/*
+		 * Instancia o objeto empresa, permitindo manipular suas informações e atributos
+		 */
 		Empresa empresa1 = new Empresa();
 		int escolha;
 		while (true) {
@@ -19,9 +22,6 @@ public class TerceiroPrograma_metodos_e_objetos {
 		if(escolha!= 1 && escolha!=2) {
 			System.out.println("\n\tInválido");
 			break;
-		}
-		
-
-		}entrada.close();}}
+		}}entrada.close();}}
 
 
