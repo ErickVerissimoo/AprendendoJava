@@ -7,7 +7,7 @@ package introdução_ao_java;
  * complicado, porém é sim possivel, usando o for e outras ferramentas. 
  */
 import java.util.Scanner;
-public class VigésimoSextoPrograma {
+public class VigésimoSextoPrograma_calcularpotencias{
 
 	public static void main(String[] args) {
 		double A, B, resultado;
