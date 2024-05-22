@@ -12,6 +12,10 @@ public class DécimoSextoPrograma_pequeno_jogo_de_palavras {
 			if (tentativas <1) {
 				System.out.print("\n\tVocê perdeu");
 				break;}
+			/*
+			 * "equals" é um método em Java que compara duas Strings.
+			 * Faz parte da enorme biblioteca do Java. 
+			 */
 		if (!palavra2.equals(palavra)) {
 			System.out.print("\n\tPalavra errada, tente novamente Lhe restam: " + tentativas + "\n\tDigite a palavra: " );
 			palavra2 = entrada.next();		
@@ -21,6 +25,11 @@ public class DécimoSextoPrograma_pequeno_jogo_de_palavras {
 
 			}
 		}
+		/*
+		 * O programa acima é um pequeno jogo de adivinhação de palavras,
+		 * onde o usuário tenta adivinhar a palavra pré-estabelecida
+		 * pelo programa.
+		 */
 		entrada.close();}
 
 		

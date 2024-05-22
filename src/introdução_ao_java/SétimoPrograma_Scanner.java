@@ -16,14 +16,22 @@ public class SétimoPrograma_Scanner {
 
 	public static void main(String[] args) {
 		/*
-		 * Comentários em construção
+		 * Para usar o Scanner, é necessário instanciá-lo no programa, como
+		 * é feito no programa abaixo. Lembrando que no Java existe uma série
+		 * de bibliotecas que contém diversas classes pré-programadas, e a instanciação
+		 * consiste em criar uma derivação da classe, que herda seus atributos
+		 * e definições, porém de maneira mais concreta e estabelecida com valores
+		 * reais, e não genéricos como está contido no corpo da classe.
 		 */
 		Scanner entrada = new Scanner(System.in);
 		int A=0;
 		int B=0;
 		int resultado=0;
 		/*
-		 * Comentários em construção
+		 * O comando "(nome do objeto da classe Scanner). é o comando que inicializa
+		 * o Scanner, ou seja, ao usá-lo, você está acionando o Scanner, e o que vem
+		 * após esse código, ou seja, o "next....." é usado para armazenar e 
+		 * definir o tipo de váriavel que foi inserida, numa váriavel criada inicialmente.
 		 */
 		System.out.println("Digite um numero:");
 		A=entrada.nextInt();
@@ -32,7 +40,11 @@ public class SétimoPrograma_Scanner {
 		resultado=A+B;
 		System.out.println("A soma dos números digitados é:" + resultado);
 		/*
-		 * Comentários em construção
+		 * Embora não seja obrigatório fechar o Scanner, é uma boa prática 
+		 * de programação fechá-lo como está no código abaixo, pois caso
+		 * não seja fechado, pode acarretar alguns problemas como a poluição
+		 * visual do código, uso desnecessário de recursos de memória da 
+		 * máquina, na qual pode levar a lentidão ou travamentos. 
 		 */
 		entrada.close();
 	}

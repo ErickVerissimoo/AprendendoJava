@@ -15,7 +15,13 @@ public class DécimoOitavoPrograma_calculadoracompleta {
 		double B= 0;
 		double A = 0;
 		/*
-		 * comentarios em construção
+		 * Abaixo temos a chamada da função Math.pow, que faz parte da
+		 * bilioteca do Java. Podemos sim calcular potenciação sem essa
+		 * função, mas ela existe para justamente facilitar a programação.
+		 * Poderíamos usar o for para fazer a potenciação, porém demandaria
+		 * mais trabalho, principalmente se precisasse ser feito diversas 
+		 * vezes. E usar métodos da própria biblioteca do Java, é considerado
+		 * uma boa prática de programação.
 		 */
 		double resultado2 = Math.pow(A, B);
 		System.out.print("\n\tBem vindo a calculadora \n\tMenu \n\n\t1: Soma \n\t2: Subtração \n\t3: Multiplicação \n\t4: Divisão \n\t5: Potenciação \n\t6: Sair \n\n\tEntre com o número: ");
@@ -67,6 +73,10 @@ public class DécimoOitavoPrograma_calculadoracompleta {
 				default:
 				System.out.print("\n\tEntre com algo válido");
 				entrada.close();
+				/*
+				 * O programa acima é basicamente uma calculadora usando
+				 * a estrutura switch, não há muito a ser acrescentado.
+				 */
 		}
 	entrada.close();}
 

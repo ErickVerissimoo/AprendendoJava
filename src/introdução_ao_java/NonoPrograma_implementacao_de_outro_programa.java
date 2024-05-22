@@ -36,4 +36,9 @@ public class NonoPrograma_implementacao_de_outro_programa {
 	System.out.print("\tO resultado da sua operacao é: " + resultado);
 	entrada.close();
 	}
+	/*
+	 * O programa acima é uma calculadora simples, que analisa a entrada
+	 * inicial do usuário e os números inseridos, e com base na entrada 
+	 * inicial é definido o tipo de operação a ser realizada com os números.
+	 */
 }
