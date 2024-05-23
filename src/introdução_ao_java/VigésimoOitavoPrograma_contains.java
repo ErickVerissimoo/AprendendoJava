@@ -11,7 +11,7 @@ public class VigésimoOitavoPrograma_contains {
 			/*
 			 * O método contains verifica se o valor associado a uma String
 			 * contém determinado ou determinados caracteres. Por exemplo, no
-			 * caso abaixo verifica se a String contém as letras "a" e "e"
+			 * caso abaixo verifica se a String contém as letras "a" e "e".
 			 */
 		if(palavra.contains("a")) {
 			System.out.println("\n\t\bPalavra invalida \n\tTente novamente:");
