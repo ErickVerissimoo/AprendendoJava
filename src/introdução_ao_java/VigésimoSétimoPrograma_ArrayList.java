@@ -7,7 +7,10 @@ public class VigésimoSétimoPrograma_ArrayList {
 		 * Comentários em construção
 		 */
 		ArrayList<String> bandas = new ArrayList<String> ();
-		
+		bandas.add("Destruction");
+		System.out.println(bandas);
+		bandas.set(0, "Rush");
+		System.out.println(bandas);
 	}
 
 }
