@@ -16,6 +16,12 @@ public class VigésimoSextoPrograma_calcularpotencias{
 		A = entrada.nextDouble();
 		System.out.println("Entre com o expoente");
 		B = entrada.nextDouble();
+		/*
+		 * Abaixo nós chamamos a função mathpow e passamos as
+		 * váriaveis A e B como parâmetros para o método. O método
+		 * abaixo faz parte do grupo de métodos onde é obrigatório 
+		 * a inserção de parâmetros devido a sua lógica de funcionamento.
+		 */
 		resultado = Math.pow(A, B);
 		System.out.println(resultado);
 		entrada.close();

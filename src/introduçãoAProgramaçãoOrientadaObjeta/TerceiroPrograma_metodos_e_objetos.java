@@ -7,12 +7,16 @@ public class TerceiroPrograma_metodos_e_objetos {
 		Scanner entrada = new Scanner (System.in);
 		/*
 		 * Instancia o objeto empresa, permitindo manipular suas informações e atributos
+		 * Como já dito anteriormente, um objeto é uma derivação direta de uma classe
 		 */
 		Empresa empresa1 = new Empresa();
 		int escolha;
 		while (true) {
 		System.out.print("\n\tO que você quer fazer? \n\t1 - Demitir \n\t2 - Contratar");
 		escolha = entrada.nextInt();
+		/*
+		 * Cada if chama um método contido em outro arquivo. 
+		 */
 		if (escolha ==1) {
 			empresa1.demitir();
 		}
