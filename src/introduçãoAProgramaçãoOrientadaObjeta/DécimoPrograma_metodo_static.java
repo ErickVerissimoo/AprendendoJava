@@ -18,7 +18,7 @@ public class DécimoPrograma_metodo_static {
 		 * 
 		 */
 	double resultado = Calculadora.CalculadoraFuncionario(200, 90);
-	System.out.println(resultado);
+	System.out.println(resultado); 
 	}
 
 }
