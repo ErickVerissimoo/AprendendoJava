@@ -1,6 +1,6 @@
 package introdução_ao_java;
 import java.util.ArrayList;
-public class VigésimoSétimoPrograma_ArrayList {
+public class VigésimoSétimoPrograma_ArrayList_INTRO {
 
 	public static void main(String[] args) {
 		/*

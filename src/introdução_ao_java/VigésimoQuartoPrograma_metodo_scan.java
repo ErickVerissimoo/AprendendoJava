@@ -16,6 +16,9 @@ public class VigésimoQuartoPrograma_metodo_scan {
 		altura = entrada.nextFloat();
 		CalculoArea(base, altura);
 		entrada.close();
+		/*
+		 * O programa acima é uma mescla do Scan e de métodos com parametros
+		 */
 	}
 
 }

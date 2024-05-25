@@ -1,5 +1,5 @@
 package classes;
-import classes.Estado_civil;
+
 public class usuario {
 	public Estado_civil estadocivil;
 	public double altura;
