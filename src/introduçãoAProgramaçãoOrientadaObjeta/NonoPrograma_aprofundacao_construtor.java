@@ -17,7 +17,10 @@ public class NonoPrograma_aprofundacao_construtor {
 		 * você precisa criar o construtor no arquivo da classe, e definir os códigos 
 		 * lá. No caso abaixo, o código a ser exebido é um booleano, que exibe se
 		 * a cadeira está voando ou não. Como eu defini true, a instanciação desse objeto
-		 * e construtor, exibirá no console "true".
+		 * e construtor, exibirá no console uma série de declarações.
+		 * 
+		 * Um construtor também pode receber parâmetros, nesse caso, será obrigatório
+		 * colocar algum valor diretamente nos parenteses abaixo.
 		 */
 		Cadeira_voadora cadeira = new Cadeira_voadora();
 	}
