@@ -10,6 +10,9 @@ public class OitavoPrograma_aprofundacaoModificadores_de_acesso {
 		System.out.println("Entre com o nome");
 		pessoa.setNome(entrada.next());
 		System.out.println(pessoa.getNome());
+		System.out.println("Dê um apelido a pessoa");
+		pessoa.apelido = entrada.next();
+		System.out.println(pessoa.apelido);
 		entrada.close();
 	}
 

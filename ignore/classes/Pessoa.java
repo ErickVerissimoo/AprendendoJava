@@ -2,6 +2,7 @@ package classes;
 
 public class Pessoa {
 	private String nome;
+	public String apelido;
 	public String getNome() {
 		return nome;
 		}
