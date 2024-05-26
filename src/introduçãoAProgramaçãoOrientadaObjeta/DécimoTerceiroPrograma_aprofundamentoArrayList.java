@@ -16,13 +16,14 @@ public class DécimoTerceiroPrograma_aprofundamentoArrayList {
 		 * a um arraylist, permitindo usá-lo de diversas formas, formas essas que
 		 * um array comum não suportaria.
 		 */
+		int i =0;
 		ArrayList <String> Nomes = new ArrayList<String>();
 		Scanner entrada = new Scanner (System.in);
+		for (i = 0; i <=11; i++) {
 		System.out.println("Entre com um nome");
 		Nomes.add(entrada.next());
-		System.out.println(Nomes + "\n\tA");
+		}
 		entrada.close();
-
+		System.out.println(Nomes + "\n\t");	
 	}
-
 }
