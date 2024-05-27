@@ -22,8 +22,8 @@ public class DécimoTerceiroPrograma_aprofundamentoArrayList {
 		for (i = 0; i <=11; i++) {
 		System.out.println("Entre com um nome");
 		Nomes.add(entrada.next());
-		}
+		}	entrada.close();
 		System.out.println(Nomes + "\n\t");	
-		entrada.close();
+	
 	}
 }
