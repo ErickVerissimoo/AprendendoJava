@@ -14,31 +14,47 @@ package MiniProjetos;
 import classes.Produto;
 import java.util.*;
 public class GerenciamentoEstoque {
-	
+	/*
+	 * Eu inicialmente tornei tudo isso static, pois creio que ter o acesso
+	 * facilitado a esses objetos e atributos vai facilitar a construção do programa.
+	 * Por exemplo, é útil o Scanner ser estático, para eu poder construir métodos e 
+	 * facilitar o desenvolvimento do código.
+	 */
+	public static Scanner entrada = new Scanner(System.in);
+	public static Produto produto = new Produto();
+	public static int opcao2;
+	public static int opcao;
+	public static ArrayList <Produto> produtos = new ArrayList<>();
 	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
-		int opcao;
 		int i;
-		ArrayList <Produto> produtos = new ArrayList<>();
 		System.out.print("\n\tMenu do estoque \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto \n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos \n\t4 - Ver estoque \n\t5 - Sair \n\n\tEntre com a escolha: ");
 		opcao = entrada.nextInt();
-	
-		do {
-		Produto produto = new Produto();
+
 		if (opcao == 1) {
-			System.out.print("\n\tVocê escolheu adicionar produto! \n\tEntre com o nome do produto: ");
-			produto.setNome(entrada.next());
-			System.out.print("\n\tEntre com a descrição do produto: ");
-			produto.setDescricao(entrada.next());
-			System.out.print("\n\tEntre com o preço:");
-			produto.setPreco(entrada.nextDouble());
-			System.out.print("\n\tEntre com a quantidade");
-			produto.setQuantidade(entrada.nextInt());
-			produtos.add(produto);
-			System.out.println("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1- sim \n\t2 - não");
-			if (opcao == 2) {
+			do {
+				AdicionarProduto();
+			 }while(opcao !=2);}
+			else if (opcao == 2) {
 			for (i=0; i>=produtos.size(); i++) {
 				System.out.println(produtos.get(i));
-			}
-		}}}while (opcao ==1);}}
+			}}entrada.close();} 
+	
+				public static void AdicionarProduto() {
+				System.out.print("\n\tVocê escolheu adicionar produto! \n\tEntre com o nome do produto: ");
+				produto.setNome(entrada.next());
+				System.out.print("\n\tEntre com a descrição do produto: ");
+				produto.setDescricao(entrada.next());
+				System.out.print("\n\tEntre com o preço:");
+				produto.setPreco(entrada.nextDouble());
+				System.out.print("\n\tEntre com a quantidade");
+				produto.setQuantidade(entrada.nextInt());
+				produtos.add(produto);
+				System.out.println("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1- sim \n\t2 - não");
+				opcao = entrada.nextInt(); while(opcao !=2);}
+			
+	public static void AlterarProduto() {
+		System.out.println("Você escolheu alterar produto!");
+	}
+					
+}
 	
