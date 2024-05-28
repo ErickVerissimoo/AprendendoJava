@@ -2,7 +2,7 @@ package superClasse;
 
 public class Pessoa {
 	
-	public String nome;
+	public static String nome;
 	public String Sobrenome;
 	public String CPF;
 	public int idade;
@@ -41,6 +41,9 @@ public class Pessoa {
 	}
 	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+	public void ComerFruta() {
+		System.out.printf(" %s Comeu uma fruta", nome);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
