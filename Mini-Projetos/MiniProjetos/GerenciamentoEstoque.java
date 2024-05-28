@@ -34,12 +34,22 @@ public class GerenciamentoEstoque {
 			do {
 				AdicionarProduto();
 				opcao2 = entrada.nextInt();
+				if(opcao2 == 1) {
+					do{
+						AdicionarProduto();
+					}while (opcao2 == 1);
+				}else {
+					break;
+				}
 				while (opcao2 == 1) {
 					AdicionarProduto();
+					if(opcao2 == 2) {
+						break;
+					}
 				}  
 			 }while(opcao !=2);}
 			else if (opcao == 2) {
-			for (i=0; i>=produtos.size(); i++) {
+			for (i=0; i<=produtos.size(); i++) {
 				System.out.println(produtos.get(i));
 			}}entrada.close();} 
 	
