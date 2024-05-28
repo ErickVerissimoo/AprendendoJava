@@ -26,10 +26,9 @@ public class GerenciamentoEstoque {
 	private static int opcao;
 	private static ArrayList <Produto> produtos = new ArrayList<>();
 	public static void main(String[] args) {
-		int i;
-		System.out.print("\n\tMenu do estoque \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto \n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos \n\t4 - Ver estoque \n\t5 - Sair \n\n\tEntre com a escolha: ");
+	int i = 0;
+		Exibir_menu_inicial();
 		opcao = entrada.nextInt();
-
 		if (opcao == 1) {
 			do {
 				AdicionarProduto();
@@ -39,15 +38,16 @@ public class GerenciamentoEstoque {
 						AdicionarProduto();
 					}while (opcao2 == 1);
 				}else {
-					break;
+					Exibir_menu_inicial();
 				}
 				while (opcao2 == 1) {
 					AdicionarProduto();
 					if(opcao2 == 2) {
-						break;
+						continue;
 					}
-				}  
-			 }while(opcao !=2);}
+					continue;
+				}Exibir_menu_inicial();  
+			 }while(opcao2 !=2);}
 			else if (opcao == 2) {
 			for (i=0; i<=produtos.size(); i++) {
 				System.out.println(produtos.get(i));
@@ -67,10 +67,17 @@ public class GerenciamentoEstoque {
 				opcao2 = entrada.nextInt();}
 			
 	public static void AlterarProduto() {
-		System.out.println("Você escolheu alterar produto!");
+		System.out.println("Você escolheu alterar produto!" );
+		System.out.println();
 	}
 	public static void ConsultarProduto() {
 		System.out.print("Você escolheu consultar produtos!");
+	}
+	public static void Exibir_menu_inicial() {
+	System.out.print("\n\tMenu inicial \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto "
+			+ "\n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos"
+			+ " \n\t4 - Ver estoque "
+			+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");
 	}
 }
 
