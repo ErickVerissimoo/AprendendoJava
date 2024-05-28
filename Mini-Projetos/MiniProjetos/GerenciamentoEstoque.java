@@ -20,11 +20,11 @@ public class GerenciamentoEstoque {
 	 * Por exemplo, é útil o Scanner ser estático, para eu poder construir métodos e 
 	 * facilitar o desenvolvimento do código.
 	 */
-	public static Scanner entrada = new Scanner(System.in);
-	public static Produto produto = new Produto();
-	public static int opcao2;
-	public static int opcao;
-	public static ArrayList <Produto> produtos = new ArrayList<>();
+	private static Scanner entrada = new Scanner(System.in);
+	private static Produto produto = new Produto();
+	private static int opcao2;
+	private static int opcao;
+	private static ArrayList <Produto> produtos = new ArrayList<>();
 	public static void main(String[] args) {
 		int i;
 		System.out.print("\n\tMenu do estoque \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto \n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos \n\t4 - Ver estoque \n\t5 - Sair \n\n\tEntre com a escolha: ");
@@ -33,6 +33,10 @@ public class GerenciamentoEstoque {
 		if (opcao == 1) {
 			do {
 				AdicionarProduto();
+				opcao2 = entrada.nextInt();
+				while (opcao2 == 1) {
+					AdicionarProduto();
+				}  
 			 }while(opcao !=2);}
 			else if (opcao == 2) {
 			for (i=0; i>=produtos.size(); i++) {
@@ -50,11 +54,14 @@ public class GerenciamentoEstoque {
 				produto.setQuantidade(entrada.nextInt());
 				produtos.add(produto);
 				System.out.println("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1- sim \n\t2 - não");
-				opcao = entrada.nextInt(); while(opcao !=2);}
+				opcao2 = entrada.nextInt();}
 			
 	public static void AlterarProduto() {
 		System.out.println("Você escolheu alterar produto!");
 	}
-					
+	public static void ConsultarProduto() {
+		System.out.print("Você escolheu consultar produtos!");
+	}
 }
+
 	
