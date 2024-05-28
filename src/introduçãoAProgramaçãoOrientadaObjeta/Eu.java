@@ -1,3 +1,7 @@
+/*
+ * Este é o décimo sétimo programa, o nome é diferente para convenção
+ */
+
 package introduçãoAProgramaçãoOrientadaObjeta;
 import superClasse.*;
 public class Eu extends Pessoa {
