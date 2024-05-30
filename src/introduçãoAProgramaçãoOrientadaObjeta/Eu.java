@@ -1,5 +1,5 @@
 /*
- * Este é o décimo sétimo programa, o nome é diferente para convenção
+ * Este é o décimo sexto programa, o nome é diferente para convenção
  */
 
 package introduçãoAProgramaçãoOrientadaObjeta;

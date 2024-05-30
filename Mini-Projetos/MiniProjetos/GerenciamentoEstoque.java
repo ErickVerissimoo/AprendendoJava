@@ -40,8 +40,7 @@ public class GerenciamentoEstoque {
 					System.out.print("\n\tEntrada inválida! \n\n\tEntre com algo válido:");
 					opcao=entrada.nextInt();
 				}
-			}while(opcao2==1);}
-				
+			}while(opcao2==1);}		
 			}
 		
 	
