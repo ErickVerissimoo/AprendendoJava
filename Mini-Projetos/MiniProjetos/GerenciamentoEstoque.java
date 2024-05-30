@@ -29,29 +29,21 @@ public class GerenciamentoEstoque {
 	int i = 0;
 		Exibir_menu_inicial();
 		opcao = entrada.nextInt();
-		if (opcao == 1) {
+		while(opcao==1) {
 			do {
 				AdicionarProduto();
 				opcao2 = entrada.nextInt();
-				if(opcao2 == 1) {
-					do{
-						AdicionarProduto();
-					}while (opcao2 == 1);
-				}else {
+				if(opcao2==2) {
 					Exibir_menu_inicial();
+					opcao = entrada.nextInt();
+				} else {
+					System.out.print("\n\tEntrada inválida! \n\n\tEntre com algo válido:");
+					opcao=entrada.nextInt();
 				}
-				while (opcao2 == 1) {
-					AdicionarProduto();
-					if(opcao2 == 2) {
-						continue;
-					}
-					continue;
-				}Exibir_menu_inicial();  
-			 }while(opcao2 !=2);}
-			else if (opcao == 2) {
-			for (i=0; i<=produtos.size(); i++) {
-				System.out.println(produtos.get(i));
-			}}entrada.close();} 
+			}while(opcao2==1);}
+				
+			}
+		
 	
 				public static void AdicionarProduto() {
 				System.out.print("\n\tVocê escolheu adicionar produto! \n\tEntre com o nome do produto: ");
@@ -63,9 +55,7 @@ public class GerenciamentoEstoque {
 				System.out.print("\n\tEntre com a quantidade");
 				produto.setQuantidade(entrada.nextInt());
 				produtos.add(produto);
-				System.out.println("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1- sim \n\t2 - não");
-				opcao2 = entrada.nextInt();}
-			
+				System.out.print("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1 - sim \n\t2 - não");}			
 	public static void AlterarProduto() {
 		System.out.println("Você escolheu alterar produto!" );
 		System.out.println();
@@ -78,7 +68,9 @@ public class GerenciamentoEstoque {
 			+ "\n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos"
 			+ " \n\t4 - Ver estoque "
 			+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");
+			
 	}
-}
+	}
+
 
 	
