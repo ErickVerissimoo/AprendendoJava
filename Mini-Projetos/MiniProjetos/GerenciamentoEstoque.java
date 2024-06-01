@@ -25,23 +25,17 @@ public class GerenciamentoEstoque {
 	private static int opcao;
 	private static ArrayList <Produto> produtos = new ArrayList<>();
 	public static void main(String[] args) {
-	Exibir_menu_inicial();
-		opcao = entrada.nextInt();
 		
+	Exibir_menu_inicial();
 		 while(opcao==1 || opcao2==1) {
 				AdicionarProduto();
-				System.out.print("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1 - sim \n\t2 - não \n\n\tEntre com a opção: ");
-				opcao2 = entrada.nextInt();
+				  while(opcao2!= 1 && opcao2 !=2) {
+						System.out.print("\n\tEntrada inválida! Tente novamente: ");
+						opcao2 = entrada.nextInt();
+				}
 				if(opcao2==2) {
 					Exibir_menu_inicial();
-					opcao = entrada.nextInt();
-				} else if (opcao2==1){
-					AdicionarProduto();
-					System.out.print("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1 - sim \n\t2 - não \n\n\tEntre com a opção: ");
-					opcao2 = entrada.nextInt();
-				} else if(opcao2!=1 && opcao2!=2) {
-					System.out.println("\n\tEntre com a escolha: ");
-					opcao2 = entrada.nextInt();}}
+				}}
 		if(opcao==2) {
 						AlterarProduto();}}
 		
@@ -56,20 +50,51 @@ public class GerenciamentoEstoque {
 				System.out.print("\n\tEntre com a quantidade: ");
 				produto.setQuantidade(entrada.nextInt());
 				produtos.add(produto);
+				System.out.print("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1 - sim \n\t2 - não \n\n\tEntre com a opção: ");
+				opcao2 = entrada.nextInt();
 				}
 	
 				public static void AlterarProduto() {	
+				int alterarproduto;
+				int escolha;
 				int i = 0;
-				while(i<produtos.size()) {
-			System.out.printf("\n\n\tQual produto você deseja alterar?");
-			System.out.printf("\n\t%d - %s" ,i,produtos.get(i).getNome()); 
-			System.out.printf("\n\t%d - %s" ,i,produtos.get(i).getDescricao());
-			System.out.printf("\n\t%d - %s" ,i,produtos.get(i).getPreco());
-			System.out.printf("\n\t%d - %s" ,i,produtos.get(i).getQuantidade());
+				String opcao;
+				System.out.printf("\n\n\tQual produto você deseja alterar?");
+				while(i<produtos.size()) {		
+			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getNome()); 
+			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getDescricao());
+			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getPreco());
+			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getQuantidade());
 			System.out.println("                                              ");
-			i++;
+			i++;}
+				System.out.println("\n\n\tEntre com a opção: ");
+				alterarproduto = entrada.nextInt();
+				Produto produto = produtos.get(alterarproduto-1);
+				System.out.printf(  "\n\tNome: %s \n\tDescrição: %s \n\tPreço: %f \n\tQuantidade: %d ", produtos.get(alterarproduto-1).getNome(), 
+						produtos.get(alterarproduto-1).getDescricao(), 
+						produtos.get(alterarproduto-1).getPreco(), 
+						produtos.get(alterarproduto-1).getQuantidade());
+				System.out.print("\n\tO que você deseja fazer: \n\n\tAlterar alguma propriedade do produto"
+						+ "\n\tRemover alguma propriedade do produto selecionado"
+						+ "\n\tRemover o produto do estoque"
+						+ "\n\tDigite a escolha: ");
+				opcao = entrada.next();
+				if(opcao.contains("nome") || opcao.contains("Nome")) {
+					System.out.println("Você escolheu nome! O que você deseja fazer? "
+							+ "\n\n\t1 - Remover nome "
+							+ "\n\t2 - Alterar nome "
+							+ "\n\tEntre com a escolha: ");
+						escolha = entrada.nextInt();
+						if (escolha == 1) {
+							produtos.get(alterarproduto-1).setNome("");
+							produtos.add(produto);
+							System.out.println("Nome removido");
+							
+						}
+				}
 		}
-	}
+				
+	
 	public static void ConsultarProduto() {
 		System.out.print("Você escolheu consultar produtos!");
 	}
@@ -77,6 +102,7 @@ public class GerenciamentoEstoque {
 	System.out.print("\n\tMenu inicial \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto "
 			+ "\n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos"
 			+ " \n\t4 - Ver estoque "
-			+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");		
+			+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");	
+	opcao = entrada.nextInt();
 	}
 	}
