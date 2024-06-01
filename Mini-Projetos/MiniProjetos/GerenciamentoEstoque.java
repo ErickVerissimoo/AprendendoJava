@@ -34,8 +34,11 @@ public class GerenciamentoEstoque {
 				if(opcao2==2) {
 					Exibir_menu_inicial();
 				}}
-		if(opcao==2) {
-						AlterarProduto();}
+		while(opcao==2 || opcao4==1) {
+						AlterarProduto();
+						if (opcao4==2) {
+							Exibir_menu_inicial();}
+						}
 		
 		while(opcao==3 || opcao3==2) {
 			ConsultarProduto();
@@ -53,7 +56,6 @@ public class GerenciamentoEstoque {
 			System.out.print("\n\tPrograma encerrado");
 		}
 		}
-		
 				public static void AdicionarProduto() {
 				Produto produto = new Produto();
 				System.out.print("\n\tVocê escolheu adicionar produto! \n\tEntre com o nome do produto: ");
@@ -68,14 +70,11 @@ public class GerenciamentoEstoque {
 				System.out.print("\n\tProduto adicionado com sucesso! \n\tVocê deseja cadastrar outro produto? \n\t1 - sim \n\t2 - não \n\n\tEntre com a opção: ");
 				opcao2 = entrada.nextInt();
 				}
-	
 				public static void AlterarProduto() {	
-				int alterarproduto;
-				int escolha, quantidade;
-				int i = 0;
-				String alteracao;
-				String opcao;
-				System.out.printf("\n\n\tQual produto você deseja alterar?");
+				int alterarproduto, escolha, quantidade, i=0;
+				double preço;
+				String alteracao, opcao;
+				System.out.print("\n\n\tQual produto você deseja alterar?");
 				while(i<produtos.size()) {		
 			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getNome()); 
 			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getDescricao());
@@ -83,7 +82,7 @@ public class GerenciamentoEstoque {
 			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getQuantidade());
 			System.out.println("                                              ");
 			i++;}
-				System.out.println("\n\n\tEntre com a opção: ");
+				System.out.print("\n\n\tEntre com a opção: ");
 				alterarproduto = entrada.nextInt();
 				Produto produto = produtos.get(alterarproduto-1);
 				System.out.printf(  "\n\tNome: %s \n\tDescrição: %s \n\tPreço: %f \n\tQuantidade: %d ", produtos.get(alterarproduto-1).getNome(), 
@@ -105,7 +104,6 @@ public class GerenciamentoEstoque {
 							produtos.get(alterarproduto-1).setNome("");
 							produtos.add(produto);
 							System.out.println("\n\tNome removido");
-							
 						}
 						if(escolha==2) {
 						System.out.print("\n\tEntre com o novo nome: ");
@@ -115,6 +113,17 @@ public class GerenciamentoEstoque {
 						System.out.println("\n\tNome alterado!");
 						}
 						else if (opcao.contains("Descrição") || opcao.contains("descrição")) {
+							System.out.println("Você escolheu descrição! O que você deseja fazer? "
+									+ "\n\n\t1 - Remover descrição "
+									+ "\n\t2 - Alterar descrição "
+									+ "\n\tEntre com a escolha: ");
+							escolha= entrada.nextInt();
+							if(escolha==1) {
+								produtos.get(alterarproduto-1).setDescricao("");
+								produtos.add(produto);
+								System.out.println("\n\tDescrição removida");
+							}
+							if(escolha==2) {
 						System.out.print("\n\tEntre com a nova descrição: ");
 						alteracao = entrada.next();
 						produtos.get(alterarproduto -1).setDescricao(alteracao);
@@ -122,6 +131,17 @@ public class GerenciamentoEstoque {
 						System.out.println("\n\tA descrição foi alterada!");
 						}
 						else if(opcao.contains("Quantidade") || opcao.contains("quantidade")) {
+							System.out.println("Você escolheu quantidade! O que você deseja fazer? "
+									+ "\n\n\t1 - Remover quantidade "
+									+ "\n\t2 - Alterar quantidade "
+									+ "\n\tEntre com a escolha: ");
+							escolha = entrada.nextInt();
+							if(escolha==1) {
+								produtos.get(alterarproduto-1).setQuantidade(0);
+								produtos.add(produto);
+								System.out.println("\n\tQuantidade removida");
+							}
+							if (escolha==2) {
 							System.out.println("\n\tEntre com a nova quantidade: ");
 							quantidade = entrada.nextInt();
 							produtos.get(alterarproduto -1).setQuantidade(quantidade);
@@ -129,7 +149,27 @@ public class GerenciamentoEstoque {
 							System.out.print("\n\tA quantidade foi alterada! ");
 						}
 				}
-		}
+						else if (opcao.contains("Preço") || opcao.contains("preço")) {		
+							System.out.println("Você escolheu preço! O que você deseja fazer? "
+									+ "\n\n\t1 - Remover preço "
+									+ "\n\t2 - Alterar quantidade "
+									+ "\n\tEntre com a escolha: ");
+							escolha = entrada.nextInt();
+							if (escolha==1) {
+								produtos.get(alterarproduto-1).setPreco(0);
+								produtos.add(produto);
+								System.out.println("\n\tPreço removido");
+							}
+							if (escolha ==2) {
+								System.out.print("\n\tEntre com o novo preço: ");
+								preço = entrada.nextDouble();
+								produtos.get(alterarproduto -1).setPreco(preço);
+								produtos.add(produto);
+								System.out.println("\n\tPreço alterado");
+							}
+						}
+						}}System.out.print("\n\tVocê deseja cadastrar outro produto? \n\t1 - sim \n\t2 - não \n\n\tEntre com a opção: ");
+							opcao4 = entrada.nextInt();}
 	public static void ConsultarProduto() {
 		int consulta;
 		int i=0;
@@ -155,8 +195,6 @@ public class GerenciamentoEstoque {
 					produtos.get(i).getQuantidade());
 			i++;
 		}
-		
-		
 	}
 	public static void Exibir_menu_inicial() {
 	System.out.print("\n\tMenu inicial \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto "
