@@ -9,7 +9,6 @@
  * nível. E como último requisito, o programa deve ser capaz de permitir ver todos
  * os produtos listados em estoque, ordenados por nome e preço.
  */
-
 package MiniProjetos;
 import classes.Produto;
 import java.util.*;
@@ -37,7 +36,16 @@ public class GerenciamentoEstoque {
 					Exibir_menu_inicial();
 				}}
 		if(opcao==2) {
-						AlterarProduto();}}
+						AlterarProduto();}
+		if(opcao==3) {
+			ConsultarProduto();}
+		if(opcao==4) {
+			Consultar_estoque();
+		}
+		if(opcao==5) {
+			System.out.print("\n\tPrograma encerrado");
+		}
+		}
 		
 				public static void AdicionarProduto() {
 				Produto produto = new Produto();
@@ -58,6 +66,7 @@ public class GerenciamentoEstoque {
 				int alterarproduto;
 				int escolha;
 				int i = 0;
+				String alteracao;
 				String opcao;
 				System.out.printf("\n\n\tQual produto você deseja alterar?");
 				while(i<produtos.size()) {		
@@ -88,15 +97,44 @@ public class GerenciamentoEstoque {
 						if (escolha == 1) {
 							produtos.get(alterarproduto-1).setNome("");
 							produtos.add(produto);
-							System.out.println("Nome removido");
+							System.out.println("\n\tNome removido");
 							
+						}
+						if(escolha==2) {
+						System.out.print("\n\tEntre com o novo nome: ");
+						alteracao = entrada.next();
+						produtos.get(alterarproduto-1).setNome(alteracao);
+						produtos.add(produto);
+						System.out.println("\n\tNome alterado!");
 						}
 				}
 		}
-				
-	
 	public static void ConsultarProduto() {
-		System.out.print("Você escolheu consultar produtos!");
+		int consulta;
+		int i=0;
+		System.out.print("\n\tVocê escolheu consultar produtos!");
+		while (i<produtos.size()) {
+			System.out.printf("\n\tID:%d \n\tNome: %s",i+1, produtos.get(i).getNome());
+			i++;
+		}
+		System.out.println("Digite o produto a ter seus dados consultados ");
+		consulta = entrada.nextInt();
+		System.out.printf("\n\tNome: %s \n\tDescrição: %s \n\tPreço: %f \n\tQuantidade: %d ", produtos.get(consulta).getNome(), 
+				produtos.get(consulta).getDescricao(),
+				produtos.get(consulta).getPreco(),
+				produtos.get(consulta).getQuantidade());
+		System.out.println("\tConsulta realizada com sucesso!");
+	}
+	public static void Consultar_estoque() {
+		int i =0;
+		System.out.println("\n\tVocê escolheu consultar estoque! \n\tAqui está o estoque completo!");
+		while(i<produtos.size()) {
+			System.out.printf("\n\tNome: %s \n\tQuantidade disponível: %d", i+1, produtos.get(i).getNome(), 
+					produtos.get(i).getQuantidade());
+			i++;
+		}
+		
+		
 	}
 	public static void Exibir_menu_inicial() {
 	System.out.print("\n\tMenu inicial \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto "
