@@ -20,11 +20,14 @@ public class GerenciamentoEstoque {
 	 * facilitar o desenvolvimento do código.
 	 */
 	private static Scanner entrada = new Scanner(System.in);
-	private static int opcao, opcao2, opcao3, opcao4, opcao5;
+	private static int opcao, opcao2, opcao3, opcao4;
 	private static ArrayList <Produto> produtos = new ArrayList<>();
 	public static void main(String[] args) {
-		
 	Exibir_menu_inicial();
+	while(produtos.size()==0 && opcao==4 || opcao==3 || opcao==2) {
+		System.out.print("\n\tO estoque está vazio! Adicione produtos para poder consultá-los"
+				+ "\n\n\tDigite outra opção: ");
+		opcao = entrada.nextInt();}
 		 while(opcao==1 || opcao2==1) {
 				AdicionarProduto();
 				  while(opcao2!= 1 && opcao2 !=2) {
@@ -38,24 +41,36 @@ public class GerenciamentoEstoque {
 						AlterarProduto();
 						if (opcao4==2) {
 							Exibir_menu_inicial();}
-						}
-		
-		while(opcao==3 || opcao3==2) {
+				}
+		while(opcao==3 || opcao3==1) {
 			ConsultarProduto();
+			System.out.println("\n\n\tConsulta realizada com sucesso! \n\tVocê deseja consultar outro produto? \n\t1 - Sim \n\t2 - Não"
+					+ "\n\n\tEntre com a escolha: " );
+			opcao3 = entrada.nextInt();
 			while(opcao3!= 1 && opcao3 !=2) {
 				System.out.print("\n\tEntrada inválida! Tente novamente: ");
 				opcao3 = entrada.nextInt();
+				
 		}
-		if(opcao3==2) {
-			Exibir_menu_inicial();
-		}}
-		if(opcao==4) {
+			if(opcao3==2) {
+				Exibir_menu_inicial();
+			}
+		}
+		while(opcao==4 && produtos.size()>=1) {
 			Consultar_estoque();
+			System.out.print("                                          ");
+			Exibir_menu_inicial();
+			
 		}
-		if(opcao==5) {
-			System.out.print("\n\tPrograma encerrado");
-		}
-		}
+			while(opcao !=1 && opcao!=2 && opcao!=3 && opcao!=4) {
+				if(opcao==5) {
+					System.out.print("\n\tPrograma encerrado");
+					break;
+				}
+				else {System.out.println("\n\n\tOpcão inválida! \n\tTente novamente: ");
+				opcao = entrada.nextInt();
+			
+		}}}
 				public static void AdicionarProduto() {
 				Produto produto = new Produto();
 				System.out.print("\n\tVocê escolheu adicionar produto! \n\tEntre com o nome do produto: ");
@@ -71,8 +86,10 @@ public class GerenciamentoEstoque {
 				opcao2 = entrada.nextInt();
 				}
 				public static void AlterarProduto() {	
-				int alterarproduto, escolha, quantidade, i=0;
+			
+				int escolha, quantidade, i=0;
 				double preço;
+				int alterarproduto;
 				String alteracao, opcao;
 				System.out.print("\n\n\tQual produto você deseja alterar?");
 				while(i<produtos.size()) {		
@@ -84,6 +101,10 @@ public class GerenciamentoEstoque {
 			i++;}
 				System.out.print("\n\n\tEntre com a opção: ");
 				alterarproduto = entrada.nextInt();
+				while (alterarproduto-1 < 0 || alterarproduto-1 >= produtos.size()) {
+				    System.out.print("\n\tEntrada inválida! Tente novamente: ");
+				    alterarproduto = entrada.nextInt();
+				}
 				Produto produto = produtos.get(alterarproduto-1);
 				System.out.printf(  "\n\tNome: %s \n\tDescrição: %s \n\tPreço: %f \n\tQuantidade: %d ", produtos.get(alterarproduto-1).getNome(), 
 						produtos.get(alterarproduto-1).getDescricao(), 
@@ -175,24 +196,30 @@ public class GerenciamentoEstoque {
 		int i=0;
 		System.out.print("\n\tVocê escolheu consultar produtos!");
 		while (i<produtos.size()) {
+			System.out.println("                                                   ");
 			System.out.printf("\n\tID:%d \n\tNome: %s",i+1, produtos.get(i).getNome());
+			System.out.println("                                                    ");
 			i++;
 		}
 		System.out.print("\n\tDigite o produto a ter seus dados consultados: ");
 		consulta = entrada.nextInt();
-		System.out.printf("\n\tNome: %s \n\tDescrição: %s \n\tPreço: %f \n\tQuantidade: %d ", produtos.get(consulta).getNome(), 
-				produtos.get(consulta).getDescricao(),
-				produtos.get(consulta).getPreco(),
-				produtos.get(consulta).getQuantidade());
-		System.out.println("\tConsulta realizada com sucesso! \n\tVocê deseja consultar outro produto? \n\t1 - Sim \n\t2 - Não");
-		opcao3 = entrada.nextInt();
+		while (consulta-1 < 0 || consulta-1 >= produtos.size()) {
+		    System.out.print("\n\tEntrada inválida! Tente novamente: ");
+		    consulta = entrada.nextInt();
+		}
+		System.out.printf("\n\n\tNome: %s \n\n\tDescrição: %s \n\n\tPreço: %f \n\n\tQuantidade: %d ", produtos.get(consulta-1).getNome(), 
+				produtos.get(consulta-1).getDescricao(),
+				produtos.get(consulta-1).getPreco(),
+				produtos.get(consulta-1).getQuantidade());
 	}
 	public static void Consultar_estoque() {
 		int i =0;
 		System.out.println("\n\tVocê escolheu consultar estoque! \n\tAqui está o estoque completo!");
 		while(i<produtos.size()) {
-			System.out.printf("\n\tNome: %s \n\tQuantidade disponível: %d", i+1, produtos.get(i).getNome(), 
+			System.out.println("                                                        ");
+			System.out.printf("\n\tNome: %s \n\tQuantidade disponível: %d", produtos.get(i).getNome(), 
 					produtos.get(i).getQuantidade());
+			System.out.println("                                                        ");
 			i++;
 		}
 	}
