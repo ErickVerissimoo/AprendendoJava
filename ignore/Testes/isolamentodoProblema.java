@@ -2,13 +2,13 @@ package Testes;
 import classes.Produto;
 import java.util.*;
 public class isolamentodoProblema {
+	public static Scanner entrada = new Scanner(System.in);
+	public static int opcao = 0;
+	static int opcao2;
+	static int opcao3 = 0;
+	static int opcao4;
+	static ArrayList <Produto> produtos = new ArrayList<>();
 	public static void main(String[] args) {
-		public static Scanner entrada = new Scanner(System.in);
-		public static int opcao = 0;
-		static int opcao2;
-		static int opcao3 = 0;
-		static int opcao4;
-		ArrayList <Produto> produtos = new ArrayList<>();
 		Exibir_menu_inicial();
 		if(opcao==3 || opcao3==1) {
 			ConsultarProduto();
