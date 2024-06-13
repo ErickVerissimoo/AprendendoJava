@@ -8,7 +8,25 @@ public class calculadora implements RegrasCalculadora {
 	static double Vetor [][] = new double[1000] [1000];
 	double a, b;
 	public void somar() {
-		System.out.println();
+		System.out.print("Você escolheu somar! Entre com o primeiro numero  ");
+		a = entrada.nextDouble();
+		System.out.println("Entre com o segundo numero: ");
+		b = entrada.nextDouble();
+		Vetor [999][999] = a+b;
+		System.out.printf("\n\tA soma é %f ", a+b);
+		System.out.print( "\n\tVocê deseja continuar?" 
+				+ "\n\t1 - sim"
+				+ "\n\t2 - não" );
+		opcao = entrada.nextInt();
+		while(opcao==1) {
+		for (int i = 0; i<Vetor.length;i++) {
+			double c;
+			System.out.println("Entre com mais um número para ser adicionado: ");
+			c = entrada.nextInt();
+			Vetor [i][i] = c;
+			System.out.printf("A soma disso é: %f ",a+b+c);
+		}
+		}
 		
 	}
 
@@ -37,7 +55,8 @@ public class calculadora implements RegrasCalculadora {
 		
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		calculadora calc = new calculadora();
+		calc.somar();
 
 	}
 
