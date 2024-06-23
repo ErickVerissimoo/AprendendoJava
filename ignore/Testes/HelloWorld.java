@@ -1,7 +1,7 @@
 package Testes;
 
 public class HelloWorld {
-	public static String helloworld = "Hello World!";
+	protected static String helloworld = "Hello World!";
 	HelloWorld(String helloworld) {
 	}
 	public static void main(String[] args) {
