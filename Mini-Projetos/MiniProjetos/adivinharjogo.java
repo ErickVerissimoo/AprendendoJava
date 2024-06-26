@@ -28,5 +28,5 @@ public class adivinharjogo {
 	}
 		catch(Throwable ex) {
 			System.out.println("Entrada invalida");
-		}
+		} entrada.close();
 }}
