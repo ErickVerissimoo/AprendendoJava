@@ -1,0 +1,3 @@
+Arquivo criado usando a linguagem java
+
+Leitura constatação

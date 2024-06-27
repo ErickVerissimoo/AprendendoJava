@@ -1,4 +1,4 @@
-package superClasse;
+package source.superClasse;
 
 public class SerVivo {
 	protected String tipo;
@@ -28,6 +28,7 @@ public class SerVivo {
 		else {
 			System.out.println("não está extinto");
 		}
+                System.out.print(tipo);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
