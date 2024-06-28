@@ -1,4 +1,4 @@
-package source.microConteudos_Java;
+package source.microConteudos;
 import java.util.*;
 public class Aleatorio {
 

@@ -1,4 +1,4 @@
-package source.microConteudos_Java;
+package source.microConteudos;
 
 public class ConversaoTipos_de_variaveis_primitivas {
 

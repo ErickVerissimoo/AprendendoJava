@@ -9,7 +9,7 @@
  * classe recebe os parâmetros da superclasse.
  */
 
-package source.microConteudos_Java;
+package source.microConteudos;
 import source.superClasse.*;
 public class Felino extends Animal {
 	public Felino(String categoria, int idade, boolean marinho) {

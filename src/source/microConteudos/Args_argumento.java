@@ -1,4 +1,4 @@
-package source.microConteudos_Java;
+package source.microConteudos;
 
 public class Args_argumento {
 	public static void main(String[] args) {

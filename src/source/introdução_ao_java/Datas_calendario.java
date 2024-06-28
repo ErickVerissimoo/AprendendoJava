@@ -10,7 +10,17 @@ import java.util.*;
  */
 public class Datas_calendario {
     public static void main(String[] args) {
+        /*
+        Para data podemos tanto utilizar a classe Date quanto a Calendar.
+        Porém a classe Date é considerada defasada, por isso usa-se mais a
+        classe Calendar. 
+        */
     Date data = new Date();
     Calendar date = Calendar.getInstance();
-        System.out.print(date.getTime());
+        int hora = date.get(Calendar.HOUR);
+        if(hora>12){
+            System.out.println("bom dia");
+        }else {
+            System.out.print("Boa tarde ");
+        }
 }}
