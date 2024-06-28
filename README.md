@@ -1,10 +1,10 @@
-# Bem vindo(a) ao meu repositório de java Standard Edition (JSE)
+# Bem vindo(a) ao meu repositório de Java Standard Edition (JSE)
 
 *Aqui estarei construindo desde o 0 o meu aprendizado em Java. Apesar de já saber um pouco, decidi começar do 0. Sempre com muita transparência e comentando o código, explicando calmamente o funcionamento, conceituando o código e afins. Ao longo dessse arquivo Readme, será adicionado várias imagens e várias atualizações que eu achar pertinente.*
 
 ## IDE
 
-*Para o Java, estarei usando o Eclipse IDE e o OpenJDK 21 instalado.* 
+*Para o Java, estarei usando o Netbeans e o OpenJDK 21 instalado.* 
 
 ## Intuito principal
 
@@ -16,18 +16,12 @@
 
 - https://www.oracle.com/br/java/
 
-- [*Playlist de java em espanhol (aproveito para aperfeiçoar meu espanhol e aprender java ao mesmo tempo)*](https://www.youtube.com/playlist?list=PLyvsggKtwbLX9LrDnl1-K6QtYo7m0yXWB)
+- [*curso de java youtube*](https://www.youtube.com/playlist?list=PLx4x_zx8csUjFC5WWjoNUL7LOOD7LCKRW);
 
   #### Funcionamento dos códigos do repositório 
 
-  **Src**: *É onde se encontra o conteúdo principal. É nele que se encontra as classes java e demais conteúdos.*
-
-  **Bin**: *É nele que se encontra as classes java compiladas, ou seja, convertidas numa linguagem na qual o computador consegue compreender. No geral, apenas se concentre na pasta src.*
+  **Src**: *É onde se encontra o conteúdo principal. É nele que se encontra o conteúdo principal do código.*
   
-  **.classpath:** *A pasta .classpath é basicamente a pasta utilizada pelo eclipse para localizar as pastas Bin e Src, para 
-  identificar onde alocar os arquivos java compilados e aonde criar e armazenar novos arquivos java. 
-  
-  **.project**: *A função mais importante do arquivo .project no Eclipse IDE é armazenar as configurações essenciais do projeto, como o tipo de projeto, as configurações de construção e as dependências, permitindo que o Eclipse gerencie e construa o projeto corretamente*
-  	**.settings**: *A função principal dessa pasta é alocar as configurações do Eclipse assim como seu comportamento, por exemplo como vai se comportar ao constatar alguma irregularidade no código e o seu tipo de codificação binária*
+  **nbproject**: *É onde se encontra todas as propriedades e XML do projeto. Este arquivo foi criado pela própria IDE Netbeans e o automatizador de dependências Ant.*
 
   ## [Não esqueça de ver as páginas da wiki! Clique aqui. Você encontrará em detalhes mais informações deste repositório.](https://github.com/ErickVerissimoo/AprendendoJava/wiki)

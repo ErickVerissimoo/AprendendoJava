@@ -79,10 +79,14 @@ public class GerenciamentoEstoque {
 				System.out.print("\n\tEntre com a quantidade: ");
 				produto.setQuantidade(entrada.nextInt());
 				produtos.add(produto);
-				System.out.print("\n\tProduto adicionado com sucesso! "
-						+ "\n\tVocê deseja cadastrar outro produto? "
-						+ "\n\t1 - sim "
-						+ "\n\t2 - não \n\n\tEntre com a opção: ");
+				System.out.print("""
+                                                 
+                                                 \tProduto adicionado com sucesso! 
+                                                 \tVoc\u00ea deseja cadastrar outro produto? 
+                                                 \t1 - sim 
+                                                 \t2 - n\u00e3o 
+                                                 
+                                                 \tEntre com a op\u00e7\u00e3o: """);
 				opcao2 = entrada.nextInt();
 				}
 				public static void AlterarProduto() {	
