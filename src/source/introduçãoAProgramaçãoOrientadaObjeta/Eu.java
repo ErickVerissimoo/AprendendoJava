@@ -3,7 +3,7 @@
  */
 
 package source.introduçãoAProgramaçãoOrientadaObjeta;
-import superClasse.*;
+import source.superClasse.*;
 public class Eu extends Pessoa {
 	
 	/*

@@ -4,7 +4,7 @@
  */
 
 package source.introduçãoAProgramaçãoOrientadaObjeta;
-import superClasse.*;
+import source.superClasse.*;
 /*
  * Herança é basicamente a capacidade de uma classe "herdar" as características e comportamentos 
  * de outra classe. A classe herdeira é chamada de subclasse, e a classe "mãe", ou seja, a detentora

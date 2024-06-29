@@ -1,4 +1,4 @@
-package superClasse;
+package source.superClasse;
 
 public class Pessoa {
 	
