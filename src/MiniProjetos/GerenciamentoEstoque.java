@@ -1,4 +1,9 @@
 /*
+
+
+
+
+
  * Fui contratado em uma loja que vende produtos da área de informática, e fui 
  * encarregado de criar um pequeno sistema de gerenciamento do estoque da loja.
  * Um sistema simples, porém fácil de entender. O que o sistema precisa ser capaz

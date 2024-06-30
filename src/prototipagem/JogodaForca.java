@@ -6,10 +6,10 @@ package prototipagem;
 import java.util.*;
 /**
  *
- * @author Erick
+ * @author gil
  */
-public class tabuleiro extends Jogodavelha {
+public class JogodaForca extends metodos {
     public static void main(String[] args) {
-    imprimirTabuleiro();
+        jogo();
     }
 }

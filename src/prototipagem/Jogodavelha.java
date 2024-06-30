@@ -10,7 +10,6 @@ import java.util.*;
  */
 public abstract class Jogodavelha {
    public static Scanner entrada = new Scanner (System.in);
-   static boolean perdeu = false;
    public static int x;
    protected static char jogador;
    public static int y;
@@ -47,31 +46,31 @@ public abstract class Jogodavelha {
 public void maquina(){
     Random jogadamaquina = new Random();
     boolean jogada_acabou = false; 
-       int x = jogadamaquina.nextInt(0, 4);
-       int y = jogadamaquina.nextInt(0, 4);
-       vetor[x][y] = 'O'; 
        while(vetor[x][y] == 'X' || jogada_acabou==false){
               x = jogadamaquina.nextInt(0, 4);
               y = jogadamaquina.nextInt(0, 4);
               vetor[x][y] = 'O'; 
            if(vetor[x][y] == 'O' ){
                jogada_acabou= true;
+              }
            }
        }
-}
  protected static void imprimirTabuleiro() {
-    for (int i = 0; i < vetor.length; i++) {
-        for (int j = 0; j < vetor[i].length; j++) {
-            System.out.print(vetor[i][j]);
-            if (j < vetor[i].length - 1) {
+    for (int xy = 0; xy < vetor.length; xy++) {
+        for (int yx = 0; yx < vetor[x].length; yx++) {
+            if(vetor[x][y] == jogador){
+            System.out.print(jogador);} 
+            else{
+                System.out.print(vetor[xy][yx]);
+            }
+            if (yx < vetor[x].length - 1) {
                 System.out.print(" | "); 
             }
         }
         System.out.println();
-        if (i < vetor.length - 1) {
+        if (xy < vetor.length - 1) {
             System.out.println("---------"); 
         }
     }
-}
-
+    }
    }  
