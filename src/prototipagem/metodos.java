@@ -3,66 +3,61 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package prototipagem;
-import java.util.*;
 
-/** 
+import java.util.*;
+/**
  *
  * @author Erick
  */
 public abstract class metodos {
+   
+       
+    public static void jogo() {
       
-    public static String[] palavras = {"Macaco", "Elefante", "Cachorro", "Girafa", "Vaca"}; 
-        public static void jogo(){
-          
+    String[] palavras = {"Macaco", "Elefante", "Cachorro", "Girafa", "Vaca"};
+        Random random = new Random();
+        int aleatorio = random.nextInt(5);
+        int tentativas = 15;
+        char letra;
+        int i = 0;
+        String palavra = palavras[aleatorio];
+        Scanner entrada = new Scanner(System.in);
+        ArrayList<Character> pale = new ArrayList<>();
 
-           
-           int i = 0, i2 =0, i3 =0;
-           int i4 = 1;
-           int tentativas = 15;
-           char a;
-                                      int ww =0;
-           Scanner entrada = new Scanner (System.in);
-           Random aleatorio = new Random();
-        
-           int random = aleatorio.nextInt(0, 5); 
-           String palavra = palavras[random];
-           ArrayList <Character> Palavra = new ArrayList<Character>();
-           char [] palavraChar = palavra.toCharArray();
-           System.out.print("\n\tBem vindo ao jogo da forca! \n\n\tDica: animais ");
-           System.out.println("                  ");
-               while(i<palavra.length()){
-                   System.out.print(" _");
-                   i++;
-               }
-               while(tentativas>0){
+        while (i < palavra.length()) {
+            pale.add('_');
+            i++;
+        }
 
-                   char letra;
-               System.out.print("Entre com uma letra: ");
-               letra = entrada.next().charAt(0);
-               if(palavra.contains(String.valueOf(Character.toUpperCase(letra))) && palavra.charAt(0) == letra){
-                   System.out.print("Você acertou a primeira letra!");
-                   Palavra.add(0, Character.toUpperCase(letra));
-                         tentativas--;
-               }
-         
+        while (tentativas > 0) {
+            System.out.print("Entre com uma letra: ");
+            letra = entrada.next().charAt(0);
+            tentativas--;
 
-                   else if(palavra.contains(String.valueOf(Character.toLowerCase(letra))) && palavra.charAt(0) != letra){
-                           System.out.print("Você acertou uma letra");
-                           Palavra.add(String.valueOf(letra).indexOf(palavra) ,Character.toLowerCase(letra));
-                           }
-                           }
-                           for(i = 0; i<palavra.length(); i++){
-                        if (palavraChar.equals(Palavra.get(i))){
-                            System.out.println(Palavra.get(i));
-                            
-                        } else{
-                            System.out.print(" _");
-                        }
-               }
-               
-        }  
-     
-        public static void main(String[] args) {
+            if (palavra.contains(String.valueOf(letra))) {
+                for (int i2 = 0; i2 < palavra.length(); i2++) {
+                    if (Character.toUpperCase(letra) == Character.toUpperCase(palavra.charAt(i2))) {
+                        pale.set(i2, Character.toUpperCase(letra)); 
+                    }
+                }
+            }
+            for (char c : pale) {
+                System.out.print(c + " ");
+            }
+            System.out.println("\nTentativas restantes: " + tentativas);
+                if(palavra.length() == palavra.length() - pale.size()){
+            System.out.print("Você venceu!");
+            break;
+        }
+       
+        }
+        entrada.close();
+    }
+    public static void main(String[] args) {
         jogo();
     }
 }
+
+
+    
+        
