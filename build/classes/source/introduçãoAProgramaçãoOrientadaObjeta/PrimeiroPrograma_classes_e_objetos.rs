@@ -1,2 +1,0 @@
-source.introduçãoAProgramaçãoOrientadaObjeta.Casa
-source.introduçãoAProgramaçãoOrientadaObjeta.PrimeiroPrograma_classes_e_objetos
