@@ -1,19 +1,23 @@
 package microProjetos;
-import microProjetos.Triangulo;
-import java.util.*;
+
+import java.util.Locale;
+import java.util.Scanner;
+
 public class AreaDoTriangulo {
 
 	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
-		Triangulo base, altura;
-		base = new Triangulo();
-		altura = new Triangulo();
-		System.out.println("Entre com a base ");
-		base.base = entrada.nextDouble();
-		System.out.println("Entre com a altura: ");
-		altura.altura = entrada.nextDouble();
-		double resultado = (base.base * altura.altura)/2;
-		System.out.println(resultado);
+		Locale.setDefault(Locale.US);
+		Scanner entrada;
+		entrada = new Scanner(System.in);
+		Triangulo x;
+		x = new Triangulo();
+		System.out.println("Entre com o lado 1: ");
+		x.lado1 = entrada.nextDouble();
+		System.out.println("Entre com o lado 2: ");
+		x.lado2 = entrada.nextDouble();
+		System.out.println("Entre com o lado 3: ");
+		x.lado3 = entrada.nextDouble();
+		System.out.println(x);
 		entrada.close();
 	}
 
