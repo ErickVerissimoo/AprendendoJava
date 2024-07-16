@@ -64,11 +64,7 @@ public abstract class JogoDaVelha {
 		try {
 			Imprimir();
 			
-			
-			
 			boolean terminou = false;
-			
-
 			do {
 				int horizontal;
 				int vertical;
@@ -81,27 +77,23 @@ public abstract class JogoDaVelha {
 				vertical = entrada.nextInt() - 1;
 				System.out.print("\n\tEntre com a coluna horizontal de 1 a 3:");
 				horizontal = entrada.nextInt() - 1;
+				while(tabuleiro[horizontal][vertical] == maquina2) {
+					System.out.print("\n\tEste espaço já está ocupado, tente novamente "
+							+ "\n\tDigite a linha vertical:");
+					vertical = entrada.nextInt() - 1;
+					System.out.print("\n\tDigite a linha horizontal");
+					horizontal = entrada.nextInt() - 1;
+					}
 				tabuleiro[horizontal][vertical] = jogador1;
 				maquinaVertical = aleatorio.nextInt(0, 3);
 				maquinaHorizontal = aleatorio.nextInt(0, 3);
-				while (tabuleiro[maquinaVertical][maquinaHorizontal] == tabuleiro[horizontal][vertical]) {
-					
+				while (tabuleiro[maquinaVertical][maquinaHorizontal] == jogador1) {	
 					aleatorio = new Random();
 					maquinaVertical = aleatorio.nextInt(0, 3);
 					maquinaHorizontal = aleatorio.nextInt(0, 3);
-				
 				}
 				tabuleiro[maquinaVertical][maquinaHorizontal] = maquina2;
-				while(tabuleiro[horizontal][vertical] == maquina2) {
-					System.out.print("\n\tEste espaço já está ocupado "
-							+ "\n\tDigite a linha vertical:");
-					vertical = entrada.nextInt() - 1;
-					System.out.print("Digite a linha horizontal");
-					horizontal = entrada.nextInt() - 1;
-					if(tabuleiro[horizontal][vertical] !=tabuleiro[maquinaVertical][maquinaHorizontal]) {
-					tabuleiro[horizontal][vertical] = jogador1;
-					continue;
-				}}
+				
 				if (tabuleiro[0][0] == jogador1 && tabuleiro[1][0] == jogador1 && tabuleiro[2][0] == jogador1) {
 					jogo(jogador1, maquina2);
 					System.out.print("\n\tVocê venceu!");
@@ -177,6 +169,4 @@ public abstract class JogoDaVelha {
 
 			}catch (IndexOutOfBoundsException entradaInvalida) {
 				System.out.print("\n\tentrada invalida");} 
-		}}
-
-
+		}} 
