@@ -1,98 +1,182 @@
 package prototipagem;
 
 import java.util.*;
+
 public abstract class JogoDaVelha {
-	static char [][] tabuleiro = new char [3][3];
+	static String[][] tabuleiro = new String[3][3];
 	static boolean jogoAcabou = false;
-	static Scanner entrada = new Scanner (System.in);
+	static Scanner entrada = new Scanner(System.in);
+	public static String vazio = " |";
+
+	public static void jogo(String maquina, String jogador) {
+		int x;
+		int y;
+		for (x = 0; x < tabuleiro.length; x++) {
+			for (y = 0; y < tabuleiro.length; y++) {
+				if (tabuleiro[x][y] == null)  {
+					System.out.print(vazio);
+				}
+				if (x == 0 && y == 2 && tabuleiro[x][y] == null){
+					System.out.println();
+				} else if (x == 1 && y == 2 && tabuleiro[x][y] == null)
+						 {
+
+					System.out.println();
+				}
+
+				if (x == 0 && y == 2 && tabuleiro[x][y] == jogador) {
+					System.out.printf(" %s", jogador);
+					System.out.println();
+
+				} else if (x == 1 && y == 2 && tabuleiro[x][y] == jogador) {
+					System.out.printf(" %s", jogador);
+					System.out.println();
+				}
+
+				else if (tabuleiro[x][y] == jogador) {
+					System.out.printf(" %s", jogador);
+				}
+
+				if (x == 0 && y == 2 && tabuleiro[x][y] == maquina) {
+					System.out.printf(" %s", maquina);
+					System.out.println();
+				} else if (x == 1 && y == 2 && tabuleiro[x][y] == maquina) {
+					System.out.printf(" %s", maquina);
+					System.out.println();
+				} else if (tabuleiro[x][y] == maquina) {
+					System.out.printf(" %s", maquina);
+				}
+
+				
+			}
+		}
+	}
+
+
 	
 	public static void Imprimir() {
-		for(int i = 0; i<tabuleiro.length;i++) {
-		System.out.println("  |  |  | ");
-	}}
-		public static void Jogo() {
-			try {
-				Imprimir();
-				int maquinaVertical, maquinaHorizontal;
+		for (int i = 0; i < tabuleiro.length; i++) {
+			System.out.println("  |  |  | ");
+		}
+	}
+
+	public static void Jogo() {
+		try {
+			Imprimir();
+			
+			
+			
+			boolean terminou = false;
+			
+
+			do {
 				int horizontal;
 				int vertical;
-				char jogador;
+				int maquinaVertical, maquinaHorizontal;
 				Random aleatorio;
-				boolean terminou = false;
 				aleatorio = new Random();
-				boolean começa;
-				começa = aleatorio.nextBoolean();
-		
-				do { 
-					jogador = 'X';
-					char maquina = 'O';
-					System.out.print("\n\tDigite a linha horizontal de um a 3: ");
-					horizontal = entrada.nextInt() -1;
-					System.out.print("\n\tEntre com a coluna vertical de 1 a 3:");
-					vertical = entrada.nextInt() -1;
-					tabuleiro [horizontal][vertical] = jogador;
+				String jogador1 = "X";
+				String maquina2 = "O";
+				System.out.print("\n\tDigite a linha vertical de um a 3: ");
+				vertical = entrada.nextInt() - 1;
+				System.out.print("\n\tEntre com a coluna horizontal de 1 a 3:");
+				horizontal = entrada.nextInt() - 1;
+				tabuleiro[horizontal][vertical] = jogador1;
+				maquinaVertical = aleatorio.nextInt(0, 3);
+				maquinaHorizontal = aleatorio.nextInt(0, 3);
+				while (tabuleiro[maquinaVertical][maquinaHorizontal] == tabuleiro[horizontal][vertical]) {
+					
+					aleatorio = new Random();
 					maquinaVertical = aleatorio.nextInt(0, 3);
 					maquinaHorizontal = aleatorio.nextInt(0, 3);
-					while(tabuleiro [maquinaVertical][maquinaHorizontal] == tabuleiro [vertical][horizontal]){
-						maquinaVertical = aleatorio.nextInt(0, 3);
-						maquinaHorizontal = aleatorio.nextInt(0, 3);
-			
-					}
-						 tabuleiro [maquinaVertical][maquinaHorizontal] = maquina;
-					
-					for(int i = 0; i<tabuleiro.length; i++) {
-						for(int j = 0; j<tabuleiro.length; j++) {
-							
-							  if(tabuleiro[i][j] == '\u0000') {
-									System.out.print(" |");}
-							  if (i == 0 && j == 2 && tabuleiro [i][j] == '\u0000') {
-									 
-									  System.out.println();
-								  }
-							  else   if (i == 1 && j == 2 && tabuleiro [i][j] == '\u0000') {
-									
-									  System.out.println();
-								  }
-							
-							   if(i == 0 && j ==2 && tabuleiro[i][j] == jogador) {
-									 System.out.printf(" %c",jogador );
-									 System.out.println();
-									
-								 }
-							   else  if(i == 1 && j == 2 && tabuleiro[i][j] == jogador ) {
-									 System.out.printf(" %c",jogador );
-									 System.out.println();
-							} 
-							
-							   else if (tabuleiro[i][j] == jogador) {
-									System.out.printf(" %c",jogador );
-								}
-							   
-							   
-								 
-							   if(i == 0 && j == 2 && tabuleiro[i][j] == maquina ) {
-									 System.out.printf(" %c",maquina );
-									 System.out.println();
-							}
-							   else if(i == 1 && j == 2 && tabuleiro[i][j] == maquina ) {
-									 System.out.printf(" %c",maquina );
-									 System.out.println();
-							}
-						
-							   else if(tabuleiro [i][j] == maquina) {
-								System.out.printf(" %c", maquina);
-							}
-							  if (i == tabuleiro.length) {
-								i -= tabuleiro.length;
-							}
-							if (j == tabuleiro.length){
-								j -= tabuleiro.length;
-							}
-							  }
-						  }}while(terminou ==false);	  
-					 
-				}catch(IndexOutOfBoundsException entradaInvalida){
-					System.out.print("\n\tentrada invalida");
+				
 				}
+				tabuleiro[maquinaVertical][maquinaHorizontal] = maquina2;
+				while(tabuleiro[horizontal][vertical] == maquina2) {
+					System.out.print("\n\tEste espaço já está ocupado "
+							+ "\n\tDigite a linha vertical:");
+					vertical = entrada.nextInt() - 1;
+					System.out.print("Digite a linha horizontal");
+					horizontal = entrada.nextInt() - 1;
+					if(tabuleiro[horizontal][vertical] !=tabuleiro[maquinaVertical][maquinaHorizontal]) {
+					tabuleiro[horizontal][vertical] = jogador1;
+					continue;
+				}}
+				if (tabuleiro[0][0] == jogador1 && tabuleiro[1][0] == jogador1 && tabuleiro[2][0] == jogador1) {
+					jogo(jogador1, maquina2);
+					System.out.print("\n\tVocê venceu!");
+					break;
+				} else if (tabuleiro[0][0] == jogador1 && tabuleiro[0][1] == jogador1 && tabuleiro[0][2] == jogador1) {
+					jogo(jogador1, maquina2);
+					System.out.print("\n\tVocê venceu!");
+					break;
+				} else if (tabuleiro[0][0] == jogador1 && tabuleiro[1][1] == jogador1 && tabuleiro[2][2] == jogador1) {
+					jogo(jogador1, maquina2);
+					System.out.print("\n\tVocê venceu!");
+					break;
+				} else if (tabuleiro[1][0] == jogador1 && tabuleiro[1][1] == jogador1 && tabuleiro[1][2] == jogador1) {
+					jogo(jogador1, maquina2);
+					System.out.print("\n\tVocê venceu!");
+					break;
+				} else if (tabuleiro[2][0] == jogador1 && tabuleiro[2][1] == jogador1 && tabuleiro[2][2] == jogador1) {
+					jogo(jogador1, maquina2);
+					System.out.print("\n\tVocê venceu!");
+					break;
+				}
+			else if (tabuleiro[2][0] == jogador1 && tabuleiro[1][1] == jogador1 && tabuleiro[0][2] == jogador1) {
+				jogo(jogador1, maquina2);
+				System.out.print("\n\tVocê venceu!");
+				break;}
 			
+				for (int i = 0; i < tabuleiro.length; i++) {
+					for (int j = 0; j < tabuleiro.length; j++) {
+
+						if (tabuleiro[i][j] == null || tabuleiro[i][j].isEmpty() || tabuleiro[i][j].isBlank()) {
+							System.out.print(vazio);
+						}
+						if (i == 0 && j == 2 && tabuleiro[i][j] == null ) {
+
+							System.out.println();
+						} else if (i == 1 && j == 2 && tabuleiro[i][j] == null) {
+
+							System.out.println();
+						}
+
+						if (i == 0 && j == 2 && tabuleiro[i][j] == jogador1) {
+							System.out.printf(" %s", jogador1);
+							System.out.println();
+
+						} else if (i == 1 && j == 2 && tabuleiro[i][j] == jogador1) {
+							System.out.printf(" %s", jogador1);
+							System.out.println();
+						}
+
+						else if (tabuleiro[i][j] == jogador1) {
+							System.out.printf(" %s", jogador1);
+						}
+
+						if (i == 0 && j == 2 && tabuleiro[i][j] == maquina2) {
+							System.out.printf(" %s", maquina2);
+							System.out.println();
+						} else if (i == 1 && j == 2 && tabuleiro[i][j] == maquina2) {
+							System.out.printf(" %s", maquina2);
+							System.out.println();
+						} else if (tabuleiro[i][j] == maquina2) {
+							System.out.printf(" %s", maquina2);
+						}
+
+						if (i == tabuleiro.length) {
+							i -= tabuleiro.length;
+						}
+						if (j == tabuleiro.length) {
+							j -= tabuleiro.length;
+						}
+					}
+				}
+			} while (terminou == false);
+
+			}catch (IndexOutOfBoundsException entradaInvalida) {
+				System.out.print("\n\tentrada invalida");} 
 		}}
+
+
