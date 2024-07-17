@@ -1,4 +1,4 @@
-package prototipagem;
+package MiniProjetos;
 
 public class Tabuleiro {
 

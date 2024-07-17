@@ -1,4 +1,4 @@
-package prototipagem;
+package MiniProjetos;
 
 import java.util.*;
 
@@ -61,11 +61,13 @@ public abstract class JogoDaVelha {
 	}
 
 	public static void Jogo() {
-		try {
+		
+		
 			Imprimir();
 			
 			boolean terminou = false;
 			do {
+				try {
 				int horizontal;
 				int vertical;
 				int maquinaVertical, maquinaHorizontal;
@@ -77,9 +79,10 @@ public abstract class JogoDaVelha {
 				vertical = entrada.nextInt() - 1;
 				System.out.print("\n\tEntre com a coluna horizontal de 1 a 3:");
 				horizontal = entrada.nextInt() - 1;
-				while(tabuleiro[horizontal][vertical] == maquina2) {
+				while(tabuleiro[horizontal][vertical] == maquina2 || tabuleiro[horizontal][vertical] == jogador1) {
+					jogo(jogador1, maquina2);
 					System.out.print("\n\tEste espaço já está ocupado, tente novamente "
-							+ "\n\tDigite a linha vertical:");
+							+ "\n\n\tDigite a linha vertical:");
 					vertical = entrada.nextInt() - 1;
 					System.out.print("\n\tDigite a linha horizontal");
 					horizontal = entrada.nextInt() - 1;
@@ -111,6 +114,11 @@ public abstract class JogoDaVelha {
 					System.out.print("\n\tVocê venceu!");
 					break;
 				} else if (tabuleiro[2][0] == jogador1 && tabuleiro[2][1] == jogador1 && tabuleiro[2][2] == jogador1) {
+					jogo(jogador1, maquina2);
+					System.out.print("\n\tVocê venceu!");
+					break;
+				}
+				else if (tabuleiro[0][2] == jogador1 && tabuleiro[1][2] == jogador1 && tabuleiro[2][2] == jogador1 ) {
 					jogo(jogador1, maquina2);
 					System.out.print("\n\tVocê venceu!");
 					break;
@@ -165,8 +173,7 @@ public abstract class JogoDaVelha {
 						}
 					}
 				}
-			} while (terminou == false);
-
+			 
 			}catch (IndexOutOfBoundsException entradaInvalida) {
-				System.out.print("\n\tentrada invalida");} 
-		}} 
+				System.out.print("\n\tentrada invalida");}} while (terminou == false);
+		}}
