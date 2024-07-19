@@ -2,7 +2,7 @@ package MiniProjetos;
 
 import java.util.*;
 
-public class tabuleiro {
+public final class tabuleiro {
 	public static ArrayList <Jogada> tabuleiro = new ArrayList<Jogada>();
 	static public Jogada construcao;
 	public static Scanner entrada; 
@@ -34,6 +34,7 @@ public class tabuleiro {
 			 System.out.print("Você começa! ");
 			 jogador();
 			 adicionarJogada();
+			 Interface();
 		 }
 		 else {
 			 
@@ -46,8 +47,8 @@ public class tabuleiro {
 		int horizontal = entrada.nextInt() -1;
 		System.out.print("Entre com a coluna vertical da jogada de 1 a 3: ");
 		int vertical = entrada.nextInt()-1;
-		int jogadinha = vertical + horizontal; 
-		return construcao.coordenada = jogadinha;
+		int coordenada = vertical + horizontal; 
+		return coordenada; 
 	}
 	
 	public static void adicionarJogada() {
@@ -67,7 +68,8 @@ public class tabuleiro {
 		System.out.print("\n\tBem vindo ao jogo da velha "
 				+ "com orientação objeta");
 		System.out.println();
-		jogo();
+		Interface();
+		
 		
 
 }
