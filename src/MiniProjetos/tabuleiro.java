@@ -3,75 +3,53 @@ package MiniProjetos;
 import java.util.*;
 
 public final class tabuleiro {
-	public static ArrayList <Jogada> tabuleiro = new ArrayList<Jogada>();
-	static public Jogada construcao;
-	public static Scanner entrada; 
+	public static ArrayList <Jogada> tabuleiro = new ArrayList <>();
+	public static Scanner entrada;
 	
-	
-	public static void Interface() {
-		for  (int i = 0; i <9; i++) {
-			construcao = new Jogada();
-			construcao.jogada = " |";
-			tabuleiro.add(construcao);
-			System.out.print(construcao.jogada);
-			if(i ==2) {
-				System.out.println();
-			}
-			else if (i == 5) {
-				System.out.println();
+		public static void Jogo(int jogada) {
+			
+			
+			for (int i = 0; i<9; i++) {
+				Jogada construcao = new Jogada();
+				
+					tabuleiro.add(construcao);
+					System.out.print(construcao.vazio);
+				if (i ==2 || i == 5) {
+					System.out.println();
+				}
+			
+				 if (i == jogada) {
+				
+				
+					tabuleiro.set(jogada, construcao);
+					System.out.print(construcao.getJogada());
+				}
+				
+				
+				
 			}
 			
+		}
+			
 		
-		}}
-	
-	public static void jogo( ) {
-		 boolean random;
-		 Random aleatorio;
-		 aleatorio = new Random();
-		 random = aleatorio.nextBoolean();
-		 Interface();
-		 if (random== true) {
-			 System.out.print("Você começa! ");
-			 jogador();
-			 adicionarJogada();
-			 Interface();
-		 }
-		 else {
-			 
-		 }
-	}
-	public static int jogador() {
-		construcao = new Jogada();
-		construcao.jogada = "X";
-		System.out.print("Entre com a coluna horizontal da jogada de 1 a 3: ");
-		int horizontal = entrada.nextInt() -1;
-		System.out.print("Entre com a coluna vertical da jogada de 1 a 3: ");
-		int vertical = entrada.nextInt()-1;
-		int coordenada = vertical + horizontal; 
-		return coordenada; 
-	}
-	
-	public static void adicionarJogada() {
-		int coordenada = jogador();
-		tabuleiro.set(coordenada, construcao);
-	}
-	
-	
-	
-	
-	
 	
 	public static void main(String... args) {
+		System.out.println(tabuleiro.size());
 		Random aleatorio;
 		aleatorio = new Random();
-		
 		System.out.print("\n\tBem vindo ao jogo da velha "
 				+ "com orientação objeta");
 		System.out.println();
-		Interface();
-		
-		
-
+		entrada = new Scanner (System.in);
+	
+		System.out.print("Entre com a horizontal de 1 a 3: ");
+		int horizontal = entrada.nextInt();
+		System.out.println(tabuleiro.size());
+		System.out.print("Entre com a vertical de 1 a 3: ");
+		int vertical = entrada.nextInt();
+		System.out.println(tabuleiro.size());
+		int resultado = vertical + horizontal;
+		Jogo(resultado);
 }
 	
 }
