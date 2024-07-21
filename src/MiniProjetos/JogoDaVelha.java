@@ -71,6 +71,7 @@ public abstract class JogoDaVelha {
 			
 			boolean terminou = false;
 			do {
+				
 				try {
 				int horizontal;
 				int vertical;
