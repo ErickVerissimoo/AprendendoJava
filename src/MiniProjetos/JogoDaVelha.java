@@ -95,7 +95,8 @@ public abstract class JogoDaVelha {
 				tabuleiro[horizontal][vertical] = jogador1;
 				maquinaVertical = aleatorio.nextInt(0, 3);
 				maquinaHorizontal = aleatorio.nextInt(0, 3);
-				while (tabuleiro[maquinaVertical][maquinaHorizontal] == jogador1) {	
+				while (tabuleiro[maquinaVertical][maquinaHorizontal] == jogador1 || 
+						tabuleiro[maquinaVertical][maquinaHorizontal] == maquina2) {	
 					aleatorio = new Random();
 					maquinaVertical = aleatorio.nextInt(0, 3);
 					maquinaHorizontal = aleatorio.nextInt(0, 3);
