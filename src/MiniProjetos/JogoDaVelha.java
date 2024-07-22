@@ -171,12 +171,7 @@ public abstract class JogoDaVelha {
 							System.out.printf(" %s", maquina2);
 						}
 
-						if (i == tabuleiro.length) {
-							i -= tabuleiro.length;
-						}
-						if (j == tabuleiro.length) {
-							j -= tabuleiro.length;
-						}
+						
 					}
 				}
 			 
