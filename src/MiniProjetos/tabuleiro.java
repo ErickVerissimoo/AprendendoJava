@@ -14,7 +14,7 @@ public final class tabuleiro {
 		int contador =0;
 		boolean venceu = true;
 		boolean empatou = true;
-		while(contador<=8) {
+		while(contador<8) {
 		
 				
 			
@@ -39,124 +39,123 @@ public final class tabuleiro {
 
 			while (tabuleiro[maquina_horizontal][maquina_vertical] == jogada
 					|| tabuleiro[maquina_horizontal][maquina_vertical] == maquina) {
-				aleatorio = new Random();
+			
 				maquina_vertical = aleatorio.nextInt(0, 3);
 				maquina_horizontal = aleatorio.nextInt(0, 3);
-
+			boolean Cheio = estaCheio(jogada, maquina );
+			if (Cheio == true) {
+				break;
 			}
-
-			tabuleiro[maquina_horizontal][maquina_vertical] = maquina;
+			}
+			if (tabuleiro[maquina_horizontal][maquina_vertical] == null ) {
+				tabuleiro[maquina_horizontal][maquina_vertical] = maquina;
+			}
+			
 			
 			 if (tabuleiro[0][0] == jogada && tabuleiro[1][0] == jogada && tabuleiro[2][0] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
 				break;
 			} else if (tabuleiro[0][0] == jogada && tabuleiro[0][1] == jogada && tabuleiro[0][2] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
 				break;
 
 			} else if (tabuleiro[0][0] == jogada && tabuleiro[1][1] == jogada && tabuleiro[2][2] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
 				break;
 			} else if (tabuleiro[1][0] == jogada && tabuleiro[1][1] == jogada && tabuleiro[1][2] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
 				break;
 			} else if (tabuleiro[2][0] == jogada && tabuleiro[2][1] == jogada && tabuleiro[2][2] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
+
 				break;
 			} else if (tabuleiro[0][2] == jogada && tabuleiro[1][2] == jogada && tabuleiro[2][2] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
+		
 				break;
 			} else if (tabuleiro[2][0] == jogada && tabuleiro[1][1] == jogada && tabuleiro[0][2] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
+		
 				break;
 			} else if (tabuleiro[0][1] == jogada && tabuleiro[1][1] == jogada && tabuleiro[2][1] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-				empatou = false;
+		
 				break;
 			}
 
-			else if (tabuleiro[0][0] == maquina && tabuleiro[1][0] == maquina && tabuleiro[2][0] == maquina) {
+			 if (tabuleiro[0][0] == maquina && tabuleiro[1][0] == maquina && tabuleiro[2][0] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+			
 				break;
 			} else if (tabuleiro[0][0] == maquina && tabuleiro[0][1] == maquina && tabuleiro[0][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+			
 				break;
 
 			} else if (tabuleiro[0][0] == maquina && tabuleiro[1][1] == maquina && tabuleiro[2][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+			
 				break;
 			} else if (tabuleiro[1][0] == maquina && tabuleiro[1][1] == maquina && tabuleiro[1][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+			
 				break;
 			} else if (tabuleiro[2][0] == maquina && tabuleiro[2][1] == maquina && tabuleiro[2][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+			
 				break;
 			} else if (tabuleiro[0][2] == maquina && tabuleiro[1][2] == maquina && tabuleiro[2][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+		
 				break;
 			} else if (tabuleiro[2][0] == maquina && tabuleiro[1][1] == maquina && tabuleiro[0][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+		
 				break;
 			} else if (tabuleiro[0][1] == maquina && tabuleiro[1][1] == maquina && tabuleiro[2][1] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-				empatou = false;
+		
 				break;
 			}
-			 if(contador>=8 ) {
-				 empatou = true;
-			 }
-			 else if(contador>=8 && venceu == false && empatou == true) {
+			 if(contador>5 && venceu == false) {
+				 
 				Interface(jogada, maquina);
 					System.out.print("O jogo empatou");
 					break;
 				}
-			
+			 contador++;	
 			for (int vertical = 0; vertical < tabuleiro.length; vertical++) {
 				for (int horizontal = 0; horizontal < tabuleiro.length; horizontal++) {
 
@@ -195,7 +194,7 @@ public final class tabuleiro {
 				}
 			} 
 			
-			contador++;	}}
+		}}
 		
 	
 
@@ -257,6 +256,26 @@ public final class tabuleiro {
 			}
 		}
 	}
+	
+	public static boolean estaCheio (Jogada jogada, Jogada maquina) {
+		boolean cheio = false;
+		int contador = 0;
+		for (int y = 0; y<tabuleiro.length; y++) {
+		for(int x = 0; x<tabuleiro.length; x++) {
+			
+				if (tabuleiro[x][y] == jogada || tabuleiro[x][y] == maquina || tabuleiro[x][y]!= null) {
+					contador++;
+					
+				}
+			 if (contador == 8) {
+					cheio = true;
+				}
+			}
+		}return cheio;
+		
+		
+	}
+	
 
 	public static void main(String... args) {
 		boolean acabou = false;
