@@ -2,21 +2,21 @@ package MiniProjetos;
 
 import java.util.*;
 
-public final class tabuleiro {
+public final class tabuleiro extends Object{
 
 	public static Jogada[][] tabuleiro = new Jogada[3][3];
 
 	public static void Interface(boolean repeticao) {
 
-		Jogada jogada = new Jogada();
+		Jogada jogada = new Jogada(); 
 		Jogada maquina = new Jogada();
 		Scanner entrada = new Scanner(System.in);
 		int contador =0;
 		boolean venceu = true;
 		boolean empatou = true;
 		while(contador<8) {
-		
-				
+		try {
+			boolean Cheio = estaCheio(jogada, maquina );
 			
 			Random aleatorio = new Random();
 			
@@ -36,13 +36,13 @@ public final class tabuleiro {
 			int maquina_vertical, maquina_horizontal;
 			maquina_vertical = aleatorio.nextInt(0, 3);
 			maquina_horizontal = aleatorio.nextInt(0, 3);
-
-			while (tabuleiro[maquina_horizontal][maquina_vertical] == jogada
-					|| tabuleiro[maquina_horizontal][maquina_vertical] == maquina) {
+			Runnable
+			while (tabuleiro[maquina_horizontal][maquina_vertical] == jogada && Cheio == false
+					|| tabuleiro[maquina_horizontal][maquina_vertical] == maquina && Cheio == false) {
 			
 				maquina_vertical = aleatorio.nextInt(0, 3);
 				maquina_horizontal = aleatorio.nextInt(0, 3);
-			boolean Cheio = estaCheio(jogada, maquina );
+			
 			if (Cheio == true) {
 				break;
 			}
@@ -194,6 +194,10 @@ public final class tabuleiro {
 				}
 			} 
 			
+		}catch (IndexOutOfBoundsException entradaInvalida) {
+			System.out.print("\n\tJogada inválida! Tente novamente ");
+			continue;
+			}
 		}}
 		
 	
@@ -267,7 +271,7 @@ public final class tabuleiro {
 					contador++;
 					
 				}
-			 if (contador == 8) {
+			 if (contador >= 8) {
 					cheio = true;
 				}
 			}
