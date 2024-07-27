@@ -36,7 +36,6 @@ public final class tabuleiro extends Object{
 			int maquina_vertical, maquina_horizontal;
 			maquina_vertical = aleatorio.nextInt(0, 3);
 			maquina_horizontal = aleatorio.nextInt(0, 3);
-			Runnable
 			while (tabuleiro[maquina_horizontal][maquina_vertical] == jogada && Cheio == false
 					|| tabuleiro[maquina_horizontal][maquina_vertical] == maquina && Cheio == false) {
 			
