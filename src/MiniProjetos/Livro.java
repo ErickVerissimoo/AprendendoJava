@@ -3,15 +3,27 @@ package MiniProjetos;
 public class Livro {
     private String autor;
     private int id;
-    private int ano;
+    private String nomeLivro;
+	private int ano;
     private genero Genero;
+    
+    public String getNomeLivro() {
+		return nomeLivro;
+	}
 
-    public Livro(String autor, int id, int ano, genero Genero ){
-        this.autor = autor;
-        this.id = id;
-        this.ano = ano;
-        this.Genero = Genero;
-    }
+
+	public void setNomeLivro(String nomeLivro) {
+		this.nomeLivro = nomeLivro;
+	}
+
+    @Override
+    public String toString() {
+		return "\n\tIdentificação numérica do livro:" + getId() +
+				"\n\tAutor do livro: " + getAutor() +
+				"\n\tAno de publicação: " +getAno() +
+				"\n\tGênero: " + getGenero();
+	}
+    
 
     public String getAutor() {
         return autor;
@@ -37,5 +49,8 @@ public class Livro {
     public void setGenero(genero genero) {
         Genero = genero;
     }
+
+	
+   
     
 }
