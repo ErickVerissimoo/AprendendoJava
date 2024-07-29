@@ -50,7 +50,7 @@ public class Usuario {
 	public void setIdentificacao(int identificacao) {
 		this.identificacao = identificacao;
 	}
-
+	
 	public String toString(Livro livro) {
 		return "Dados do usuario: "
 				+ "\n\tNome: " + getNome()

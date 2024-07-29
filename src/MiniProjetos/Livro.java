@@ -21,7 +21,9 @@ public class Livro {
 		return "\n\tIdentificação numérica do livro:" + getId() +
 				"\n\tAutor do livro: " + getAutor() +
 				"\n\tAno de publicação: " +getAno() +
-				"\n\tGênero: " + getGenero();
+				"\n\tGênero: " + getGenero()+
+				"\n\tNome do livro:" + getNomeLivro();
+		
 	}
     
 
