@@ -18,7 +18,7 @@ public class Gerador extends SerVivo {
 		boolean Sexo;
 		if(sexo == 1) {
 			Sexo = true;
-		} 
+		}
 		else {
 			Sexo = false;
 		}

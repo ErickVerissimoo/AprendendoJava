@@ -116,8 +116,8 @@ public class Biblioteca {
 			int id;
 			System.out.print("\n\tEntre com o numero de identificação do livro desejado: ");
 			id = entrada.nextInt();
-			for (int i = 0; i < armazenamento.size(); i++) {
-				if (id == armazenamento.get(i).getId()) {
+			for (Livro element : armazenamento) {
+				if (id == element.getId()) {
 					Livro Novolivro = armazenamento.get(id);
 					Usuario user = new Usuario(Novolivro, nome, idade, identificacao);
 					usuarios.add(user);

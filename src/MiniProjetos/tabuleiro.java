@@ -1,6 +1,7 @@
 package MiniProjetos;
 
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 public final class tabuleiro extends Object{
 
@@ -8,7 +9,7 @@ public final class tabuleiro extends Object{
 
 	public static void Interface(boolean repeticao) {
 
-		Jogada jogada = new Jogada(); 
+		Jogada jogada = new Jogada();
 		Jogada maquina = new Jogada();
 		Scanner entrada = new Scanner(System.in);
 		int contador =0;
@@ -17,9 +18,9 @@ public final class tabuleiro extends Object{
 		while(contador<8) {
 		try {
 			boolean Cheio = estaCheio(jogada, maquina );
-			
+
 			Random aleatorio = new Random();
-			
+
 			int Horizontal;
 			int Vertical;
 			System.out.print("\n\tEntre com a linha vertical de 1 a 3:  ");
@@ -32,25 +33,25 @@ public final class tabuleiro extends Object{
 				System.out.print("\n\tposição ja ocupada ");
 				continue;
 			}
-			
+
 			int maquina_vertical, maquina_horizontal;
 			maquina_vertical = aleatorio.nextInt(0, 3);
 			maquina_horizontal = aleatorio.nextInt(0, 3);
-			while (tabuleiro[maquina_horizontal][maquina_vertical] == jogada && Cheio == false
-					|| tabuleiro[maquina_horizontal][maquina_vertical] == maquina && Cheio == false) {
-			
+			while (tabuleiro[maquina_horizontal][maquina_vertical] == jogada && !Cheio
+					|| tabuleiro[maquina_horizontal][maquina_vertical] == maquina && !Cheio) {
+
 				maquina_vertical = aleatorio.nextInt(0, 3);
 				maquina_horizontal = aleatorio.nextInt(0, 3);
-			
-			if (Cheio == true) {
+
+			if (Cheio) {
 				break;
 			}
 			}
 			if (tabuleiro[maquina_horizontal][maquina_vertical] == null ) {
 				tabuleiro[maquina_horizontal][maquina_vertical] = maquina;
 			}
-			
-			
+
+
 			 if (tabuleiro[0][0] == jogada && tabuleiro[1][0] == jogada && tabuleiro[2][0] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
@@ -82,19 +83,19 @@ public final class tabuleiro extends Object{
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-		
+
 				break;
 			} else if (tabuleiro[2][0] == jogada && tabuleiro[1][1] == jogada && tabuleiro[0][2] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-		
+
 				break;
 			} else if (tabuleiro[0][1] == jogada && tabuleiro[1][1] == jogada && tabuleiro[2][1] == jogada) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê venceu!");
 				venceu = true;
-		
+
 				break;
 			}
 
@@ -102,59 +103,59 @@ public final class tabuleiro extends Object{
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-			
+
 				break;
 			} else if (tabuleiro[0][0] == maquina && tabuleiro[0][1] == maquina && tabuleiro[0][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-			
+
 				break;
 
 			} else if (tabuleiro[0][0] == maquina && tabuleiro[1][1] == maquina && tabuleiro[2][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-			
+
 				break;
 			} else if (tabuleiro[1][0] == maquina && tabuleiro[1][1] == maquina && tabuleiro[1][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-			
+
 				break;
 			} else if (tabuleiro[2][0] == maquina && tabuleiro[2][1] == maquina && tabuleiro[2][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-			
+
 				break;
 			} else if (tabuleiro[0][2] == maquina && tabuleiro[1][2] == maquina && tabuleiro[2][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-		
+
 				break;
 			} else if (tabuleiro[2][0] == maquina && tabuleiro[1][1] == maquina && tabuleiro[0][2] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-		
+
 				break;
 			} else if (tabuleiro[0][1] == maquina && tabuleiro[1][1] == maquina && tabuleiro[2][1] == maquina) {
 				Interface(jogada, maquina);
 				System.out.print("\n\tVocê perdeu!");
 				venceu = false;
-		
+
 				break;
 			}
-			 if(contador>5 && venceu == false) {
-				 
+			 if(contador>5 && !venceu) {
+
 				Interface(jogada, maquina);
 					System.out.print("O jogo empatou");
 					break;
 				}
-			 contador++;	
+			 contador++;
 			for (int vertical = 0; vertical < tabuleiro.length; vertical++) {
 				for (int horizontal = 0; horizontal < tabuleiro.length; horizontal++) {
 
@@ -188,18 +189,18 @@ public final class tabuleiro extends Object{
 					} else if (tabuleiro[horizontal][vertical] == jogada) {
 						System.out.printf(" %s", jogada.getJogada());
 					}
-				
-					
+
+
 				}
-			} 
-			
+			}
+
 		}catch (IndexOutOfBoundsException entradaInvalida) {
 			System.out.print("\n\tJogada inválida! Tente novamente ");
 			continue;
 			}
 		}}
-		
-	
+
+
 
 	// @Overload
 	public static void Interface() {
@@ -255,30 +256,30 @@ public final class tabuleiro extends Object{
 				} else if (tabuleiro[horizontal][vertical] == jogada) {
 					System.out.printf(" %s", jogada.getJogada());
 				}
-				
+
 			}
 		}
 	}
-	
+
 	public static boolean estaCheio (Jogada jogada, Jogada maquina) {
 		boolean cheio = false;
 		int contador = 0;
 		for (int y = 0; y<tabuleiro.length; y++) {
-		for(int x = 0; x<tabuleiro.length; x++) {
-			
-				if (tabuleiro[x][y] == jogada || tabuleiro[x][y] == maquina || tabuleiro[x][y]!= null) {
+		for (Jogada[] element : tabuleiro) {
+
+				if (element[y] == jogada || element[y] == maquina || element[y]!= null) {
 					contador++;
-					
+
 				}
 			 if (contador >= 8) {
 					cheio = true;
 				}
 			}
 		}return cheio;
-		
-		
+
+
 	}
-	
+
 
 	public static void main(String... args) {
 		boolean acabou = false;

@@ -4,7 +4,7 @@ public class Funcionario {
 	public String nome;
 	public double HorasTrabalhadas;
 	public double GanhoPorHora;
-	
+
 	public Funcionario(String nome, double HorasTrabalhadas, double GanhoPorHora){
 		this.nome = nome;
 		this.GanhoPorHora = GanhoPorHora;

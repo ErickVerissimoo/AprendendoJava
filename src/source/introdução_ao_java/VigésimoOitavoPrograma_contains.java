@@ -23,7 +23,7 @@ public class VigésimoOitavoPrograma_contains {
 			System.out.println("\b\bPalavra válida");
 			break;
 		}
-		
+
 	}entrada.close();
 
 }}

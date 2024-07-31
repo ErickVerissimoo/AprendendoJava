@@ -5,11 +5,11 @@ public class Usuario {
 	private String nome;
 	private int idade;
 	private int identificacao;
-	
-	
+
+
 
 	public Usuario(Livro livro, String nome, int idade, int identificacao) {
-		
+
 		this.livro = livro;
 		this.nome = nome;
 		this.idade = idade;
@@ -50,7 +50,7 @@ public class Usuario {
 	public void setIdentificacao(int identificacao) {
 		this.identificacao = identificacao;
 	}
-	
+
 	public String toString(Livro livro) {
 		return "Dados do usuario: "
 				+ "\n\tNome: " + getNome()

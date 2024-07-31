@@ -1,6 +1,8 @@
 package ignore.Testes;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import source.classes.Produto;
-import java.util.*;
 public class isolamentodoProblema {
 	public static Scanner entrada = new Scanner(System.in);
 	public static int opcao = 0;
@@ -23,7 +25,7 @@ public static void Exibir_menu_inicial() {
 System.out.print("\n\tMenu inicial \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto "
 		+ "\n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos"
 		+ " \n\t4 - Ver estoque "
-		+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");	
+		+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");
 opcao = entrada.nextInt();
 }
 public static void ConsultarProduto() {
@@ -45,7 +47,7 @@ public static void ConsultarProduto() {
 	System.out.printf("\n\n\tNome: %s "
 			+ "\n\n\tDescrição: %s "
 			+ "\n\n\tPreço: %f "
-			+ "\n\n\tQuantidade: %d ", produtos.get(consulta-1).getNome(), 
+			+ "\n\n\tQuantidade: %d ", produtos.get(consulta-1).getNome(),
 			produtos.get(consulta-1).getDescricao(),
 			produtos.get(consulta-1).getPreco(),
 			produtos.get(consulta-1).getQuantidade());
@@ -75,5 +77,5 @@ public static void AdicionarProduto() {
 	}
 }
 
-	
+
 

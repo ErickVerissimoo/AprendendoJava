@@ -6,7 +6,7 @@ public class Livro {
     private String nomeLivro;
 	private int ano;
     private genero Genero;
-    
+
     public String getNomeLivro() {
 		return nomeLivro;
 	}
@@ -23,9 +23,9 @@ public class Livro {
 				"\n\tAno de publicação: " +getAno() +
 				"\n\tGênero: " + getGenero()+
 				"\n\tNome do livro:" + getNomeLivro();
-		
+
 	}
-    
+
 
     public String getAutor() {
         return autor;
@@ -52,7 +52,7 @@ public class Livro {
         Genero = genero;
     }
 
-	
-   
-    
+
+
+
 }

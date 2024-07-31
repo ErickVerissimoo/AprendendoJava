@@ -1,7 +1,8 @@
 package source.introduçãoAProgramaçãoOrientadaObjeta;
 import java.util.Scanner;
-import source.classes.Usuário;
+
 import source.classes.Livro;
+import source.classes.Usuário;
 public class SextoPrograma_implementacao_gerenciamentoBiblioteca {
 		public static void main(String[] args) {
 			String opcao;
@@ -48,8 +49,7 @@ public class SextoPrograma_implementacao_gerenciamentoBiblioteca {
 				}
 		System.out.println("\n\tPrograma encerrado");
 		entrada.close();
-			
+
 		}
 		}
 
-	

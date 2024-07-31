@@ -1,18 +1,18 @@
 package source.introdução_ao_java;
 
 public class VigésimoSegundoProgama_array {
-	
+
 	public static void main(String[] args) {
 		/*
 		 * O comando abaixo cria um array, que possibilita que
-		 * uma váriavel receba mais de um valor. Neste caso, até 6 valores 
+		 * uma váriavel receba mais de um valor. Neste caso, até 6 valores
 		 * inteiros. Isso é útil para lidar com múltiplas váriaveis ao mesmo tempo
 		 */
 		int [] numeros = new int [6];
 		/*
 		 * Os comandos abaixo definem os valores de cada posição das váriaveis. Um array tem
 		 * forma de matrizes e ocupam determinado espaço, e pode ser definido manualmente o valor
-		 * de cada espaço. 
+		 * de cada espaço.
 		 */
 		numeros [0] = 29;
 		numeros [1] = 2;

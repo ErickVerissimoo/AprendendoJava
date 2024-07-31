@@ -7,7 +7,7 @@ public class usuario {
 	public String nome;
 	boolean Sexo;
 	boolean fumante;
-	
+
 	public usuario(double altura, double peso, String nome, boolean Sexo, boolean fumante, Estado_civil estadocivil){
 		this.altura=altura;
 		this.peso=peso;

@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package source.introdução_ao_java;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
 /**
  *
  * @author Erick
@@ -13,7 +14,7 @@ public class Datas_calendario {
         /*
         Para data podemos tanto utilizar a classe Date quanto a Calendar.
         Porém a classe Date é considerada defasada, por isso usa-se mais a
-        classe Calendar. 
+        classe Calendar.
         */
     Date data = new Date();
     Calendar date = Calendar.getInstance();

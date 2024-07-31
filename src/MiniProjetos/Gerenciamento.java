@@ -6,7 +6,7 @@ public abstract class Gerenciamento {
 	protected int fundacao;
 	protected String endereco;
 	protected static int funcionarios;
-	
+
 	public int getFuncionarios() {
 		return funcionarios;
 	}
@@ -14,9 +14,9 @@ public abstract class Gerenciamento {
 		funcionarios += funcionario;
 	}
 	public void demitir (int funcionario) {
-		this.funcionarios -= funcionario;
+		Gerenciamento.funcionarios -= funcionario;
 		}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -35,7 +35,7 @@ public abstract class Gerenciamento {
 		this.CNPJ = CNPJ;
 		this.fundacao = fundacao;
 		this.endereco = endereco;
-		this.funcionarios = funcionarios;
+		Gerenciamento.funcionarios = funcionarios;
 	}
 	public int getFundacao() {
 		return fundacao;
@@ -51,11 +51,11 @@ public abstract class Gerenciamento {
 	}
 	@Override
 	public String toString () {
-		return "\n\tDados da empresa: " 
+		return "\n\tDados da empresa: "
 				+ getFundacao() + "\n\t"
 				+ getEndereco () + "\n\t"
 				+ getCNPJ() + "\n\t"
 				+ getNome() + "\n\t"
-				+ getFuncionarios() + "\n\t"; 
+				+ getFuncionarios() + "\n\t";
 	}
 }

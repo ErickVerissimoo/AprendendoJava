@@ -6,7 +6,7 @@ public class VigésimoSétimoPrograma_ArrayList_INTRO {
 		/*
 		 * Comentários em construção
 		 */
-		ArrayList<String> bandas = new ArrayList<String> ();
+		ArrayList<String> bandas = new ArrayList<> ();
 		bandas.add("Destruction");
 		System.out.println(bandas);
 		bandas.set(0, "Rush");

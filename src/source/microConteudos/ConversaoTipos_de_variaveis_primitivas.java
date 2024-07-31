@@ -12,12 +12,12 @@ public class ConversaoTipos_de_variaveis_primitivas {
 		 * receptora. Ao passar a váriavel A do tipo float para B, ela se transfor
 		 * mará em um tipo double. Existem limitações, por exemplo, uma váriavel
 		 * do tipo int não pode converter váriaveis do tipo float ou double, mas o
-		 * contrário sim. Double ou int pode receber um inteiro. Para o char, é 
+		 * contrário sim. Double ou int pode receber um inteiro. Para o char, é
 		 * necessário usar um método que retorna um caractere seguindo a tabela
 		 * binária da ASCII. Por exemplo, na tabela ASCII, o número 70 representa
 		 * a letra F, logo seu retorno será F.
 		 */
-		double essd = (float) H;
+		double essd = H;
 		char B = (char) A;
 		System.out.println(B + "\n\t" + "Float convertido para double: " + essd);
 	}

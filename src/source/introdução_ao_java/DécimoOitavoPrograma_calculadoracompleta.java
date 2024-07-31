@@ -1,9 +1,5 @@
 package source.introdução_ao_java;
 import java.util.Scanner;
-/*
- * comentários em construção
- */
-import java.lang.Math;
 public class DécimoOitavoPrograma_calculadoracompleta {
 
 	public static void main(String[] args) {
@@ -19,7 +15,7 @@ public class DécimoOitavoPrograma_calculadoracompleta {
 		 * bilioteca do Java. Podemos sim calcular potenciação sem essa
 		 * função, mas ela existe para justamente facilitar a programação.
 		 * Poderíamos usar o for para fazer a potenciação, porém demandaria
-		 * mais trabalho, principalmente se precisasse ser feito diversas 
+		 * mais trabalho, principalmente se precisasse ser feito diversas
 		 * vezes. E usar métodos da própria biblioteca do Java, é considerado
 		 * uma boa prática de programação.
 		 */
@@ -59,7 +55,7 @@ public class DécimoOitavoPrograma_calculadoracompleta {
 			resultado = num1 / num2;
 			System.out.print("\n\tA divisão é: " + resultado);
 			break;
-		case 5: 
+		case 5:
 			System.out.print("\n\tEntre com o primeiro número: ");
 			A = entrada.nextDouble();
 			System.out.print("\n\tVocê digitou: " + A + "\n\n\tEntre com o segundo número: ");

@@ -4,24 +4,26 @@
 
 
 
- * Fui contratado em uma loja que vende produtos da área de informática, e fui 
+ * Fui contratado em uma loja que vende produtos da área de informática, e fui
  * encarregado de criar um pequeno sistema de gerenciamento do estoque da loja.
  * Um sistema simples, porém fácil de entender. O que o sistema precisa ser capaz
  * de fazer: adicionar produtos, contendo o nome do produto, descrição, quantidade
- * e preço unitário. O sistema deve ser capaz de atualizar os produtos do estoque, 
+ * e preço unitário. O sistema deve ser capaz de atualizar os produtos do estoque,
  * podendo remover ou adicionar novos produtos. O sistema deve ser capaz de consultar
  * um produto especifíco, podendo ver seu nome, descrição, quantidade e estoque dispo
  * nível. E como último requisito, o programa deve ser capaz de permitir ver todos
  * os produtos listados em estoque, ordenados por nome e preço.
  */
 package MiniProjetos;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import source.classes.Produto;
-import java.util.*;
 public class GerenciamentoEstoque {
 	/*
 	 * Eu inicialmente tornei tudo isso static, pois creio que ter o acesso
 	 * facilitado a esses objetos e atributos vai facilitar a construção do programa.
-	 * Por exemplo, é útil o Scanner ser estático, para eu poder construir métodos e 
+	 * Por exemplo, é útil o Scanner ser estático, para eu poder construir métodos e
 	 * facilitar o desenvolvimento do código.
 	 */
 	private static Scanner entrada = new Scanner(System.in);
@@ -31,7 +33,7 @@ public class GerenciamentoEstoque {
 	Exibir_menu_inicial();
 	if(opcao==3 || opcao3==1) {
 	while(opcao==3 || opcao3==1) {
-		ConsultarProduto();		
+		ConsultarProduto();
 		while(opcao3!= 1 && opcao3 !=2) {
 			System.out.print("\n\tEntrada inválida! Tente novamente: ");
 			opcao3 = entrada.nextInt();}
@@ -60,7 +62,7 @@ public class GerenciamentoEstoque {
 		while(opcao==4 && produtos.size()>=1) {
 			Consultar_estoque();
 			System.out.print("                                          ");
-			Exibir_menu_inicial();	
+			Exibir_menu_inicial();
 		}}
 			while(opcao !=1 && opcao!=2 && opcao!=3 && opcao!=4) {
 				if(opcao==5) {
@@ -85,23 +87,23 @@ public class GerenciamentoEstoque {
 				produto.setQuantidade(entrada.nextInt());
 				produtos.add(produto);
 				System.out.print("""
-                                                 
-                                                 \tProduto adicionado com sucesso! 
-                                                 \tVoc\u00ea deseja cadastrar outro produto? 
-                                                 \t1 - sim 
-                                                 \t2 - n\u00e3o 
-                                                 
+
+                                                 \tProduto adicionado com sucesso!
+                                                 \tVoc\u00ea deseja cadastrar outro produto?
+                                                 \t1 - sim
+                                                 \t2 - n\u00e3o
+
                                                  \tEntre com a op\u00e7\u00e3o: """);
 				opcao2 = entrada.nextInt();
 				}
-				public static void AlterarProduto() {	
+				public static void AlterarProduto() {
 				int escolha, quantidade, i=0;
 				double preço;
 				int alterarproduto;
 				String alteracao, opcao;
 				System.out.print("\n\n\tQual produto você deseja alterar?");
-				while(i<produtos.size()) {		
-			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getNome()); 
+				while(i<produtos.size()) {
+			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getNome());
 			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getDescricao());
 			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getPreco());
 			System.out.printf("\n\t%d - %s" ,i+1,produtos.get(i).getQuantidade());
@@ -117,10 +119,10 @@ public class GerenciamentoEstoque {
 				System.out.printf(  "\n\tNome: %s "
 						+ "\n\tDescrição: %s "
 						+ "\n\tPreço: %f "
-						+ "\n\tQuantidade: %d ", 
-						produtos.get(alterarproduto-1).getNome(), 
-						produtos.get(alterarproduto-1).getDescricao(), 
-						produtos.get(alterarproduto-1).getPreco(), 
+						+ "\n\tQuantidade: %d ",
+						produtos.get(alterarproduto-1).getNome(),
+						produtos.get(alterarproduto-1).getDescricao(),
+						produtos.get(alterarproduto-1).getPreco(),
 						produtos.get(alterarproduto-1).getQuantidade());
 				System.out.print("\n\tO que você deseja fazer: "
 						+ "\n\n\tAlterar alguma propriedade do produto"
@@ -183,7 +185,7 @@ public class GerenciamentoEstoque {
 							System.out.print("\n\tA quantidade foi alterada! ");
 						}
 				}
-						else if (opcao.contains("Preço") || opcao.contains("preço")) {		
+						else if (opcao.contains("Preço") || opcao.contains("preço")) {
 							System.out.println("Você escolheu preço! O que você deseja fazer? "
 									+ "\n\n\t1 - Remover preço "
 									+ "\n\t2 - Alterar quantidade "
@@ -225,7 +227,7 @@ public class GerenciamentoEstoque {
 		System.out.printf("\n\n\tNome: %s "
 				+ "\n\n\tDescrição: %s "
 				+ "\n\n\tPreço: %f "
-				+ "\n\n\tQuantidade: %d ", produtos.get(consulta-1).getNome(), 
+				+ "\n\n\tQuantidade: %d ", produtos.get(consulta-1).getNome(),
 				produtos.get(consulta-1).getDescricao(),
 				produtos.get(consulta-1).getPreco(),
 				produtos.get(consulta-1).getQuantidade());
@@ -241,8 +243,8 @@ public class GerenciamentoEstoque {
 		while(i<produtos.size()) {
 			System.out.println("                                                        ");
 			System.out.printf("\n\tNome: %s "
-					+ "\n\tQuantidade disponível: %d", 
-					produtos.get(i).getNome(), 
+					+ "\n\tQuantidade disponível: %d",
+					produtos.get(i).getNome(),
 					produtos.get(i).getQuantidade());
 			System.out.println("                                                        ");
 			i++;
@@ -252,7 +254,7 @@ public class GerenciamentoEstoque {
 	System.out.print("\n\tMenu inicial \n\tO que você deseja fazer: \n\n\t1 - Adicionar produto "
 			+ "\n\t2 - Alterar produtos \n\t3 - Consultar produtos específicos"
 			+ " \n\t4 - Ver estoque "
-			+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");	
+			+ "\n\t5 - Sair \n\n\tEntre com a escolha: ");
 	opcao = entrada.nextInt();
 	}
 	}

@@ -19,7 +19,7 @@ public class VigésimoPrimeiroPrograma_boolean_e_implementacao_de_programa {
 		/*
 		 * Abaixo usamos o while com um tipo booleano, true, significando que
 		 * o while será executado até houver um retorno falso ou ser forçado
-		 * a parar usando o comando break. 
+		 * a parar usando o comando break.
 		 */
 		while (true) {
 		if (generica==B) {

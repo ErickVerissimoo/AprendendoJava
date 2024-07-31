@@ -1,9 +1,10 @@
 package source.introduçãoAProgramaçãoOrientadaObjeta;
-import source.classes.Pessoa;
 import java.util.Scanner;
+
+import source.classes.Pessoa;
 public class OitavoPrograma_aprofundacaoModificadores_de_acesso {
-	
-	
+
+
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner (System.in);
 		Pessoa pessoa = new Pessoa();

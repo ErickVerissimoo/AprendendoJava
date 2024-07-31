@@ -1,5 +1,5 @@
 package source.microConteudos;
-import java.util.*;
+import java.util.Random;
 public class Aleatorio {
 
 	public static void main(String[] args) {

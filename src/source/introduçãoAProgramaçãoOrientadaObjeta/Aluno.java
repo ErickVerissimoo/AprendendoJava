@@ -4,17 +4,17 @@
  */
 
 package source.introduçãoAProgramaçãoOrientadaObjeta;
-import source.superClasse.*;
+import source.superClasse.Pessoa;
 /*
- * Herança é basicamente a capacidade de uma classe "herdar" as características e comportamentos 
+ * Herança é basicamente a capacidade de uma classe "herdar" as características e comportamentos
  * de outra classe. A classe herdeira é chamada de subclasse, e a classe "mãe", ou seja, a detentora
  * dos atributos e comportamentos originais, é chamada de superclasse. Em suma, a herança cria uma hierarquia,
  * facilitando o acesso a uma determinada classe, evitando repetições, diminuindo a verbosidade do código e facilitando
  * a manutenção do código. Para chamar uma superclasse, devemos importar a superclasse e usar o comando "extends", seguido
- * do nome da superclasse. Abaixo nós vemos um aluno herdar os atributos e comportamentos da superclasse pessoa. 
- * 
+ * do nome da superclasse. Abaixo nós vemos um aluno herdar os atributos e comportamentos da superclasse pessoa.
+ *
  * É possível realizar esse código sem usar herança, usando somente classes, porém em situações onde se lida com
- * múltiplas classes, usar herança otimiza o processo. 
+ * múltiplas classes, usar herança otimiza o processo.
  */
 public class Aluno extends Pessoa  {
 

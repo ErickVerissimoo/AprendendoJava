@@ -10,19 +10,19 @@ public final class professor extends pessoa {
 	@Override
 	public void Comer() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void Dormir() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void urinar() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

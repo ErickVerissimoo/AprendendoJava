@@ -7,9 +7,9 @@ public class SextoPrograma_elseif {
     /*
      * o Else if é uma estrutura de if onde há a possibilidade de estabelecer uma série
      * de condições, muito semelhante ao switch. Porém aqui, pode haver o retorno de mais
-     * de uma condição booleana (verdadeiro ou falso), 
+     * de uma condição booleana (verdadeiro ou falso),
      * usando os comando AND e OR, mas veremos mais profundamente
-     * mais tarde. Sendo que: AND = && e OR == ||. 
+     * mais tarde. Sendo que: AND = && e OR == ||.
      */
     if (A>B){
         System.out.println("A é maior que B");

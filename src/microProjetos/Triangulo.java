@@ -8,10 +8,11 @@ public class Triangulo {
 public double area() {
 	return (lado1 + lado2 + lado3) /2;
 }
+@Override
 public String toString() {
 	return "O calculo deu: " + String.format("%.2f", area());
-	
-	
+
+
 }
 
 }

@@ -4,7 +4,7 @@ public class DécimoPrimeiroPrograma_variaveis_estaticas {
 
 	public static void main(String[] args) {
 		/*
-		 * vejam o arquivo "classes -> Numero" para obter mais detalhes 
+		 * vejam o arquivo "classes -> Numero" para obter mais detalhes
 		 * das classes e da variavel estática contida no construtor destes códigos.
 		 */
 		Numero num = new Numero();
@@ -13,7 +13,7 @@ public class DécimoPrimeiroPrograma_variaveis_estaticas {
 		 * Variveis estaticas são compartilhadas entre todas as
 		 * derivações da classe na qual pertence. Variaveis estáticas
 		 * podem ser acessadas livremente pelos objetos instanciados da classe, e quando
-		 * são estaticas e públicas, podem ser acessadas até mesmo por classes 
+		 * são estaticas e públicas, podem ser acessadas até mesmo por classes
 		 * diferentes facilmente e alocadas em outra váriavel, como vemos abaixo.
 		 * Isso ocorre porque enquanto que as variaveis não estaticas são alocadas
 		 * separadamente na memória, e para utiliza-las deve-se fazer de maneira mais
@@ -26,7 +26,7 @@ public class DécimoPrimeiroPrograma_variaveis_estaticas {
 		int C = Numero.A;
 		System.out.println(B);
 		System.out.print(C + 3);
-		
+
 
 	}
 

@@ -1,5 +1,6 @@
 package source.introduçãoAProgramaçãoOrientadaObjeta;
 import java.util.Scanner;
+
 import source.classes.Empresa;
 public class TerceiroPrograma_metodos_e_objetos {
 
@@ -15,7 +16,7 @@ public class TerceiroPrograma_metodos_e_objetos {
 		System.out.print("\n\tO que você quer fazer? \n\t1 - Demitir \n\t2 - Contratar");
 		escolha = entrada.nextInt();
 		/*
-		 * Cada if chama um método contido em outro arquivo. 
+		 * Cada if chama um método contido em outro arquivo.
 		 */
 		if (escolha ==1) {
 			empresa1.demitir();

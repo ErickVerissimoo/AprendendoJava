@@ -1,5 +1,5 @@
 package microProjetos;
-import java.util.*;
+import java.util.Scanner;
 public class Aleatorio {
 
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Aleatorio {
 		double a, soma = 0;
 		char resposta;
 		do {
-		System.out.print("\n\tEntre com um valor: ");	
+		System.out.print("\n\tEntre com um valor: ");
 		a = entrada.nextDouble();
 		soma += a;
 		System.out.print(soma + "\n\t");

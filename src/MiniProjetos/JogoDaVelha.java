@@ -4,7 +4,8 @@
 
 package MiniProjetos;
 
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 public abstract class JogoDaVelha {
 	static String[][] tabuleiro = new String[3][3];
@@ -51,13 +52,13 @@ public abstract class JogoDaVelha {
 					System.out.printf(" %s", maquina);
 				}
 
-				
+
 			}
 		}
 	}
 
 
-	
+
 	public static void Imprimir() {
 		for (int i = 0; i < tabuleiro.length; i++) {
 			System.out.println("  |  |  | ");
@@ -65,13 +66,13 @@ public abstract class JogoDaVelha {
 	}
 
 	public static void Jogo() {
-		
-		
+
+
 			Imprimir();
-			
+
 			boolean terminou = false;
 			do {
-				
+
 				try {
 				int horizontal;
 				int vertical;
@@ -95,14 +96,14 @@ public abstract class JogoDaVelha {
 				tabuleiro[horizontal][vertical] = jogador1;
 				maquinaVertical = aleatorio.nextInt(0, 3);
 				maquinaHorizontal = aleatorio.nextInt(0, 3);
-				while (tabuleiro[maquinaVertical][maquinaHorizontal] == jogador1 || 
-						tabuleiro[maquinaVertical][maquinaHorizontal] == maquina2) {	
+				while (tabuleiro[maquinaVertical][maquinaHorizontal] == jogador1 ||
+						tabuleiro[maquinaVertical][maquinaHorizontal] == maquina2) {
 					aleatorio = new Random();
 					maquinaVertical = aleatorio.nextInt(0, 3);
 					maquinaHorizontal = aleatorio.nextInt(0, 3);
 				}
 				tabuleiro[maquinaVertical][maquinaHorizontal] = maquina2;
-				
+
 				if (tabuleiro[0][0] == jogador1 && tabuleiro[1][0] == jogador1 && tabuleiro[2][0] == jogador1) {
 					jogo(jogador1, maquina2);
 					System.out.print("\n\tVocê venceu!");
@@ -133,7 +134,7 @@ public abstract class JogoDaVelha {
 				jogo(jogador1, maquina2);
 				System.out.print("\n\tVocê venceu!");
 				break;}
-			
+
 				for (int i = 0; i < tabuleiro.length; i++) {
 					for (int j = 0; j < tabuleiro.length; j++) {
 
@@ -171,10 +172,10 @@ public abstract class JogoDaVelha {
 							System.out.printf(" %s", maquina2);
 						}
 
-						
+
 					}
 				}
-			 
+
 			}catch (IndexOutOfBoundsException entradaInvalida) {
-				System.out.print("\n\tentrada invalida");}} while (terminou == false);
+				System.out.print("\n\tentrada invalida");}} while (!terminou);
 		}}

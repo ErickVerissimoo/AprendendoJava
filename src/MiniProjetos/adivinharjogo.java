@@ -1,5 +1,6 @@
 package MiniProjetos;
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 public class adivinharjogo {
 
 	public static void main(String[] args) {

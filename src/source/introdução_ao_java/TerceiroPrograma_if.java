@@ -6,10 +6,10 @@ package source.introdução_ao_java;
             /*
              * Abaixo entramos no conceito de if e else
              * o if basicamente consiste no estabelecimento de uma cláusula
-             * que caso se comprove verdadeira, executa uma determinada linha de 
+             * que caso se comprove verdadeira, executa uma determinada linha de
              * código. Caso se comprove falsa, ou não faz nada e apenas segue o código, ou
              * executa a segunda cláusula, o else. Neste programa, caso a média seja
-             * maior do que a nota, aparecerá reprovado. Caso a nota seja maior, 
+             * maior do que a nota, aparecerá reprovado. Caso a nota seja maior,
              * aparecerá aprovado.
              */
             if (Nota<Media){

@@ -8,21 +8,21 @@ public class SerVivo {
 	protected void gerar(){
 		System.out.println("Um novo ser vivo foi gerado");
 	}
-	public SerVivo(String tipo, int idade, 
+	public SerVivo(String tipo, int idade,
 		boolean sexo, boolean extinto){
 		String a;
 		this.tipo=tipo;
 		this.idade=idade;
 		this.sexo = sexo;
 		this.extinto = extinto;
-		if(sexo == true) {
+		if(sexo) {
 			a = "masculino";
 			System.out.println(a);
 		} else {
 			a = "feminino";
 			System.out.println(a);
 		}
-		if(extinto==true) {
+		if(extinto) {
 			System.out.println("está extinto");
 		}
 		else {

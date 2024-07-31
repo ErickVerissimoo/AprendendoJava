@@ -1,5 +1,7 @@
 package MiniProjetos;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import source.classes.RegrasCalculadora;
 public class calculadora implements RegrasCalculadora {
 	public static int opcao;
@@ -7,7 +9,8 @@ public class calculadora implements RegrasCalculadora {
 	static ArrayList <Double> numeros = new ArrayList <>();
 	static double Vetor [][] = new double[1000] [1000];
 	double a, b, c;
-	    public void somar() {
+	    @Override
+		public void somar() {
 	        double soma = 0;
 	        System.out.print("Você escolheu somar! Entre com o primeiro número: ");
 	        double a = entrada.nextDouble();
@@ -29,6 +32,7 @@ public class calculadora implements RegrasCalculadora {
 	            }
 	        } while (opcao == 1);
 	    }
+	@Override
 	public void subtrair() {
 		double resto = 0;
         System.out.print("Você escolheu somar! Entre com o primeiro número: ");
@@ -50,9 +54,10 @@ public class calculadora implements RegrasCalculadora {
                 System.out.printf("A soma disso é: %.2f%n", resto);
             }
         } while (opcao == 1);
-		
+
 	}
 
+	@Override
 	public void multiplicar() {
 		double multi= 0;
         System.out.print("Você escolheu somar! Entre com o primeiro número: ");
@@ -74,9 +79,10 @@ public class calculadora implements RegrasCalculadora {
                 System.out.printf("A soma disso é: %.2f%n", multi);
             }
         } while (opcao == 1);
-		
+
 	}
 
+	@Override
 	public void dividir() {
 		double divisao = 0;
         System.out.print("Você escolheu somar! Entre com o primeiro número: ");
@@ -98,9 +104,10 @@ public class calculadora implements RegrasCalculadora {
                 System.out.printf("A soma disso é: %.2f%n", divisao);
             }
         } while (opcao == 1);
-		
+
 	}
 
+	@Override
 	public void potencia() {
 		double pow = 0;
         System.out.print("Você escolheu somar! Entre com o primeiro número: ");
@@ -122,9 +129,10 @@ public class calculadora implements RegrasCalculadora {
                 System.out.printf("A soma disso é: %.2f%n", pow);
             }
         } while (opcao == 1);
-		
+
 	}
 
+	@Override
 	public void raizQuadrada() {
 		double Quadrado = 0;
         System.out.print("Você escolheu somar! Entre com o primeiro número: ");
@@ -143,7 +151,7 @@ public class calculadora implements RegrasCalculadora {
                 System.out.printf("A soma disso é: %.2f%n", Math.sqrt(Quadrado));
             }
         } while (opcao == 1);
-		
+
 	}
 	public static void main(String[] args) {
 		calculadora calc = new calculadora();

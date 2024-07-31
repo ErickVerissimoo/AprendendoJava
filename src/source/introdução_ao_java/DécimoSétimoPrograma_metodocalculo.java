@@ -13,7 +13,7 @@ public class DécimoSétimoPrograma_metodocalculo {
 	 * que o método ou o atributo, pertence a classe na qual está inserido,
 	 * e não a um objeto instanciado. Void indica que o método em nenhum
 	 * momento vai retornar nada, apenas executar determinado código sem
-	 * nenhum tipo de retorno. O private indica que o acesso ao método 
+	 * nenhum tipo de retorno. O private indica que o acesso ao método
 	 * ou atributo é controlado e não pode ser acessado facilmente por outras
 	 * classes pertencentes a outros arquivos e pacotes.
 	 */

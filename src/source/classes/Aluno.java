@@ -21,7 +21,7 @@ public class Aluno {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

@@ -1,7 +1,7 @@
 package source.Arquivos_em_Java;
 import java.io.IOException;
-import java.nio.file.*;
-import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 public class OutroArquivo_txt_em_linux {
 
 	public static void main(String[] args) throws IOException {

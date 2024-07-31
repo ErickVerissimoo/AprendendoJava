@@ -15,7 +15,7 @@ package source.introdução_ao_java;
 public class PrimeiroPrograma_variaveis_e_print {
 /*
  * a classe main é basicamente onde se inicia o programa java, ou seja, é
- * a partir dali que o código começará a rodar. 
+ * a partir dali que o código começará a rodar.
  */
 	public static void main(String[] args) {
 		/*

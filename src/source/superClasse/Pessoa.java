@@ -1,12 +1,12 @@
 package source.superClasse;
 
 public class Pessoa {
-	
+
 	public static String nome;
 	public String Sobrenome;
 	public String CPF;
 	public int idade;
-	
+
 	public void Comer(){
 		// String mensagem = String.format("%s comeu", nome);
 		// outro jeito de fazer o código abaixo
@@ -22,7 +22,7 @@ public class Pessoa {
 		return nome;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		Pessoa.nome = nome;
 	}
 	public String getSobrenome() {
 		return Sobrenome;

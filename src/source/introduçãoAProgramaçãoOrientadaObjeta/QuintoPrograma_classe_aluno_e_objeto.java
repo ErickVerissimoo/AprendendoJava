@@ -1,6 +1,7 @@
 package source.introduçãoAProgramaçãoOrientadaObjeta;
-import source.classes.Aluno;
 import java.util.Scanner;
+
+import source.classes.Aluno;
 public class QuintoPrograma_classe_aluno_e_objeto {
 
 	public static void main(String[] args) {

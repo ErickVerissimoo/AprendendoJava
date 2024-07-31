@@ -1,6 +1,7 @@
 package MiniProjetos;
 
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 public class geradorEmail {
     public static int escolha2=0, escolha=0;
     public static  Scanner entrada = new Scanner (System.in);
@@ -30,11 +31,11 @@ public class geradorEmail {
 						caracteres.charAt(vetor[11]), caracteres.charAt(vetor[12]),
 						caracteres.charAt(vetor[13]), caracteres.charAt(vetor[14]),
 						caracteres.charAt(vetor[15]), caracteres.charAt(vetor[16]));
-								
+
 			}
 	public static void main(String[] args) {
-               
-          
+
+
             System.out.print("\n\tBem vindo ao gerador de email e senha! \n\tVocê deseja gerar uma senha? "
                     + "\n\t1- Sim"
                     + "\n\t2 - Não"

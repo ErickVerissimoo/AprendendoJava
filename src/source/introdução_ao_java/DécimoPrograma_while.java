@@ -11,11 +11,11 @@ public class DécimoPrograma_while {
 				System.out.print("\n\tParabéns, você acertou o número");}
 		 else {
 			 /*
-			  * A estrutura de repetição while consiste em executar 
+			  * A estrutura de repetição while consiste em executar
 			  * determinado bloco de códigos, enquando a condição do
 			  * while não for satisfatória. Ou seja, enquanto o valor
 			  * inserido pelo usuário não for igual a 20, o bloco de
-			  * códigos abaixo será executado indeterminadamente. 
+			  * códigos abaixo será executado indeterminadamente.
 			  */
 		while (Valor != numero) {
 			 System.out.print("\n\tNúmero errado, tente novamente: ");

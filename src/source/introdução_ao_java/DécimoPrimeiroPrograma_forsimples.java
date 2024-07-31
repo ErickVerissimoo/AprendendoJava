@@ -6,7 +6,7 @@ public class DécimoPrimeiroPrograma_forsimples {
 	public static void main(String[] args) {
 		/*
 		 * Abaixo está a estrutura for, na qual também faz parte dos ciclos de repetição.
-		 * suas principais funcionalidades são de repetir códigos determinadas vezes, 
+		 * suas principais funcionalidades são de repetir códigos determinadas vezes,
 		 * - diferentemente do while que repete indeterminadamente, e percorrer listas.
 		 * Na estrutura for, primeiro você deve atribuir uma váriavel, a condição para o for rodar,
 		 * e a mudança que o for executará. Nesse caso, a mudança é atribuir 1 a váriavel i, até ela ser
@@ -16,5 +16,5 @@ public class DécimoPrimeiroPrograma_forsimples {
 		for (int i = 0; i<=10; i++) {
 			System.out.println(i + "");
 		}
-	}	
+	}
 }

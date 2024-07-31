@@ -13,11 +13,11 @@ public class Jogada {
 	public String getVazio() {
 		return vazio;
 	}
-	
+
 	public String getMaquina() {
 		return maquina;
 	}
 
 	}
-	
+
 

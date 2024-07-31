@@ -19,7 +19,7 @@ public class AreaDoTriangulo {
 		x.lado3 = entrada.nextDouble();
 		System.out.println(x);
 		entrada.close();
-		
+
 		Triangulo [] xz = new Triangulo [2];
 	}
 

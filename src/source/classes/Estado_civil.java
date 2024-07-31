@@ -7,4 +7,4 @@ public enum Estado_civil {
 	viuvo,
 	namorando;
 }
-	
+

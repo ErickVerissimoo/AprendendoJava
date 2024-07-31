@@ -2,7 +2,7 @@ package source.introduçãoAProgramaçãoOrientadaObjeta;
 import source.classes.Casa;
 
 public class QuartoPrograma_construtores{
-  
+
 	public static void main(String[] args) {
 		/*
 		 * Abaixo instanciamos o objeto casa 2 e chamamos o método construtor
@@ -16,7 +16,7 @@ public class QuartoPrograma_construtores{
 	Casa casa2 = new Casa(22, 23);
 	/*
 	 * Abaixo nós imprimimos o valor do atributo inicializado através do
-	 * construtor. 
+	 * construtor.
 	 */
 	System.out.println(casa2.altura);
 

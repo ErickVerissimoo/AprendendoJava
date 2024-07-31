@@ -17,15 +17,15 @@ public class OitavoPrograma_Implementacao_de_um_programa {
 		Nota2=entrada.nextInt();
 		Media= (Nota1+Nota2)/2;
 		if (Media<6) {
-			System.out.print("Nome do aluno: " + Nome + "\nSituação: Reprovado");	
+			System.out.print("Nome do aluno: " + Nome + "\nSituação: Reprovado");
 		} else if (Media>=6) {
 			System.out.print("Nome do aluno: " + Nome + "\nSituação: Aprovado");
-		} 	
+		}
 		entrada.close();
 		/*
 		 * O programa acima é um programa básico, que exibe a situação
 		 * do aluno com base nas notas inseridas. Aqui é aplicado todos os
-		 * conceitos básicos anteriores. 
+		 * conceitos básicos anteriores.
 		 */
 	}
 }
