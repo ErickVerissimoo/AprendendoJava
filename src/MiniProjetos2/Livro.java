@@ -47,8 +47,8 @@ public abstract class Livro {
 		return 0;
 		}
 		else {
-			this.setValor(this.getValor() - (porcentagem * 0.01)) ;
-			return getValor();
+			double desconto = this.getValor() - (porcentagem * 0.01) ;
+			return desconto;
 	}
 		}
 	

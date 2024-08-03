@@ -20,7 +20,7 @@ public class Interface implements Jogos {
 		System.out.println("iniciar");
 
 	}
-		public static void main (String [] args) {
+		public static void main (String[] args) {
 			Interface jogo = new Interface();
 			jogo.Iniciar();
 	}

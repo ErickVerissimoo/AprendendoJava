@@ -6,7 +6,6 @@ package prototipagem;
 
 /**
  *
- * @author gil
  */
 public class JogodaForca extends metodos {
     public static void main(String[] args) {
