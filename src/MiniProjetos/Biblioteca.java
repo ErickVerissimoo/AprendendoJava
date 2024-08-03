@@ -86,7 +86,6 @@ public class Biblioteca {
 		ConsultarLivro();
 		System.out.print("\n\tQual livro você deseja remover? " + "\nEntre com o ID do livro desejado:");
 		remoção = entrada.nextInt();
-		while (remoção != armazenamento.get(i).getId()) {
 			if (remoção == armazenamento.get(i).getId()) {
 
 				System.out.print("\n\tLivro removido com sucesso");
@@ -94,12 +93,12 @@ public class Biblioteca {
 				ConsultarLivro();
 			} else {
 				System.err.print("Entrada invalida!");
-				break;
+			
 			}
-			i++;
+			
 		}
 
-	}
+	
 
 	private static void Emprestar() throws Throwable {
 		int opcao;
