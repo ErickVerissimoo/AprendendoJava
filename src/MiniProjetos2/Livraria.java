@@ -2,7 +2,7 @@ package MiniProjetos2;
 
 import java.util.ArrayList;
 
-public class Livraria implements LivrariaRegras{
+public final class Livraria implements LivrariaRegras{
 	static ArrayList <Livro> livros = new ArrayList<>();
 	private static int estoqueTotal = 0;
 	@Override
@@ -43,6 +43,7 @@ public class Livraria implements LivrariaRegras{
 	static void setEstoqueTotal() {
 		for (Livro Livros : livros) {
 			estoqueTotal++;
+			
 		}
 	
 	}
