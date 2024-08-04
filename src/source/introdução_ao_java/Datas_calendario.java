@@ -24,4 +24,5 @@ public class Datas_calendario {
         }else {
             System.out.print("Boa tarde ");
         }
+        System.out.print(date.get(Calendar.HOUR));
 }}
