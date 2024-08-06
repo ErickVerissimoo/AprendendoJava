@@ -41,13 +41,14 @@ public class ClasseAnonima  {
 	}
 	
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		cachorro Cao = (() -> System.out.print("\n\tai"));
 		Cao.latir();
 		Cao.correr();
 		cachorro.andar();
 		//Uma das formas de acessar a interface
 		ClasseAnonima.cachorro.andar();
+		throw new Exception ("Teste");
 }
 	static{
 		System.out.print("\n\tAntes do main");
